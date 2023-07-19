@@ -1,3 +1,12 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +24,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> Menu</button>
   <span class="w3-bar-item w3-right">Logo</span>
 </div>
 
@@ -51,53 +60,19 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </nav>
 
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="alignment_search">
+  <p>Choose a data field:
+  <select id="data_fields" name="data_fields" class="select_class" onchange = "ajax_call()">
+    <%User.new.serializable_hash.keys.each do |val|%>
+      <option value=<%= val%>><%= val%></option>
+    <%end%>
+  </select>
+</p>
+</div>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px;margin-top:43px;">
-
-  <!-- Header -->
-  <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
-  </header>
-  <div class="w3-container">
-    <h5>General Stats</h5>
-    <%= area_chart User.group(:phone_number).count %>
-  </div>
-
-  <div class="w3-row-padding w3-margin-bottom">
-    <div class="w3-half">
-      <%= column_chart User.group(:phone_number).count %>
-      <!-- <div class="w3-container w3-red w3-padding-16"> -->
-      <!-- </div> -->
-    </div>
-    <div class="w3-half">
-      <%= pie_chart User.group(:phone_number).count %>
-      <!-- <div class="w3-container w3-blue w3-padding-16"> -->
-      <!-- </div> -->
-    </div>
-  </div>
-
-  <div class="w3-container">
-    <h5>General Stats</h5>
-    <%= bar_chart User.group(:phone_number).count %>
-
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>General Stats</h5>
-    <%= line_chart User.group(:phone_number).count %>
-
-  </div>
-  <hr>
-  <div class="w3-container">
-    <h5>General Stats</h5>
-    <%#= bar_chart User.group(:phone_number).count %>
-
-  </div>
-  <hr>
-
+<div id="ajax_changable">
+  <%= render 'graph',users_states: @users_states%> 
+</div>
 
   
   <!-- Footer -->
@@ -132,7 +107,35 @@ function w3_close() {
   mySidebar.style.display = "none";
   overlayBg.style.display = "none";
 }
+
 </script>
 
+<script type="text/javascript">
+    function ajax_call(){
+      let value = $("#data_fields option:selected").val();
+      $.ajax({
+        type: "Get", 
+        url: "/home/index.js",
+        data: {"key": value }
+      })
+    }
+</script>
+<style type="text/css">
+  .alignment_search{
+    height: 100px;
+    width: 150px;
+    float: right;
+    margin-right: 20%
+  }
+  .select_class{
+    width: 260px;
+    border: 2px solid gray;
+    border-radius: 5%;
+    background-color: #2196f3;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+  }  
+</style>
 </body>
 </html>
