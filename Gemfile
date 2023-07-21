@@ -8,6 +8,9 @@ gem "rails", "~> 7.0.6"
 
 gem 'jquery-rails'
 gem 'byebug'
+gem 'rubyzip', '>= 1.2.1'
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+gem 'axlsx_rails'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

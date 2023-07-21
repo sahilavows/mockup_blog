@@ -1,0 +1,21 @@
+<div>
+	<table style="padding:200px;">
+ 	  <tr>
+	  <%Report.new.serializable_hash.keys.each do |i|%>
+		    <th><%= i%></th>
+	  <%end%>
+	  </tr>
+	  <%@report_states.each do |i|%>
+		  <tr>
+		    <td><%=i.id%></td>
+		    <td><%=User.find(i.user_id).name%></td>
+		    <td><%=i.passed%></td>
+		    <td><%=i.doctor_name%></td>
+		    <td><%=i.visa_type%></td>
+		    <td><%=i.purchased_insurence%></td>
+		    <td><%=i.created_at%></td>
+		    <td><%=i.updated_at%></td>
+		  </tr>
+	  <%end%>
+	</table>
+</div>

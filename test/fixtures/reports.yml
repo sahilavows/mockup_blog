@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  passed: false
+  doctor_name: MyString
+  visa_type: MyString
+  purchased_insurence: false
+
+two:
+  user_id: 1
+  passed: false
+  doctor_name: MyString
+  visa_type: MyString
+  purchased_insurence: false

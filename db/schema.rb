@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_18_034105) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_20_040222) do
+  create_table "reports", force: :cascade do |t|
+    t.integer "user_id"
+    t.boolean "passed"
+    t.string "doctor_name"
+    t.string "visa_type"
+    t.boolean "purchased_insurence"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"

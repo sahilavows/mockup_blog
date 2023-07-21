@@ -1,0 +1,76 @@
+<div id="container">
+	<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Report</h2>
+
+<%= link_to 'Generate Excel', home_excel_generate_path(format: :xlsx) %>
+<br><br>
+<%= link_to 'Dashboard',home_index_path%>
+<hr>
+<div>
+	From Date:<input class="advance_search" type='date' id='from_date' name='from_date' placeholder="From Date"> </input>
+	To Date:<input class="advance_search" type='date' id='to_date' name='to_date' placeholder="To Date"> </input>
+	<select class="advance_search" id='order_by' name='contactNumber' placeholder="OrderBy">
+    <%Report.new.serializable_hash.keys.each do |val|%>
+      <option value=<%= val%>><%= val%></option>
+    <%end%>
+  </select>
+    
+
+    <button class="advance_search" type='submit' onclick="ajax_call()">
+        Submit
+    </button>
+</div>
+
+<div id = "reports_table">
+    <!-- <div style="width:50%;float: left;">
+    	<%#= column_chart User.group(:created_at).count %>
+    </div> 
+     -->
+     <%= render partial: 'report_table'%>
+</div>
+<style type="text/css">
+	#container{
+      margin-left: 300px;
+      margin-top: 50px;
+	}
+	.advance_search{
+		width: 20%;
+    margin: 50px 15px;
+    padding: 10px 20px;
+    border: 1px solid lightgray;
+    border-radius: 10%;
+    background-color: white;
+	}
+</style>
+
+<script type="text/javascript">
+    function ajax_call(){
+      let from_date = document.getElementById("from_date").value;
+      let to_date = document.getElementById("to_date").value;
+      let order_by = document.getElementById("order_by").value;
+      $.ajax({
+        type: "Get", 
+        url: "/home/report.js",
+        data: {"advance_search":{"from_date":from_date,"to_date":to_date,"order_by":order_by}}
+      })
+    }
+</script>
