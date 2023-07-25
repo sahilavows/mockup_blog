@@ -1,0 +1,53 @@
+      <div class="col-12 col-sm-4">
+                        <div class="chard-card">
+                          <div class="card">
+                            <div class="card-header">
+                              <i class="fa fa-bar-chart" aria-hidden="true"></i> Fw Registration by State
+                            </div>
+                            <div class="card-body">
+                              <script type="text/javascript">
+                                google.charts.load("current", {
+                                  packages: ['corechart']
+                                });
+                                google.charts.setOnLoadCallback(drawChart);
+
+                                function drawChart() {
+                                  var data = google.visualization.arrayToDataTable(<%=right_chart_data.to_json.html_safe%>);
+
+                                  var view = new google.visualization.DataView(data);
+                                  view.setColumns([0, 1, {
+                                      calc: "stringify",
+                                      sourceColumn: 1,
+                                      type: "string",
+                                      role: "annotation"
+                                    },
+                                    2
+                                  ]);
+                                  var options = {
+                                    width: 275,
+                                    height: 275,
+                                    'chartArea': {
+                                      'width': '100%',
+                                      'height': '80%'
+                                    },
+                                    bar: {
+                                      groupWidth: '100%'
+                                    },
+                                    vAxis: {
+                                      gridlines: {
+                                        count: 8
+                                      }
+                                    },
+                                    legend: {
+                                      position: "none"
+                                    },
+                                  };
+                                  var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+                                  chart.draw(view, options);
+                                }
+                              </script>
+                              <div id="columnchart_values" style="width: 100%; height:100%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>

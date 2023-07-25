@@ -1,0 +1,35 @@
+                      <div class="col-12 col-sm-12">
+                        <div class="chard-card">
+                          <div class="card">
+                            <div class="card-header">
+                              <i class="fa fa-line-chart" aria-hidden="true"></i> Trend of Foreign Worker Registraion
+                            </div>
+                            <div class="card-body">
+                              <script type="text/javascript">
+                                google.charts.load('current', {
+                                  'packages': ['corechart']
+                                });
+                                google.charts.setOnLoadCallback(drawChart);
+
+                                function drawChart() {
+                                  var data = google.visualization.arrayToDataTable(<%= bottom_line_chart.to_json.html_safe%>);
+                                  var options = {
+                                    title: 'Company Performance',
+                                    curveType: 'function',
+                                    'chartArea': {
+                                      'width': '100%',
+                                      'height': '80%'
+                                    },
+                                    legend: {
+                                      position: 'bottom'
+                                    }
+                                  };
+                                  var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                                  chart.draw(data, options);
+                                }
+                              </script>
+                              <div id="curve_chart" style="width: 100%; height: 500px"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>

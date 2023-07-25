@@ -31,4 +31,12 @@ class HomeController < ApplicationController
     end
   end 
 
-end
+  def pdf_gen
+    @report_states = Report.all
+    html = File.open("/home/dell/Desktop/blog/app/views/home/_report_table.html.erb").read
+    pdf = Prawn::Document.new
+    pdf.text html.html_safe
+    pdf_data = pdf.render 
+    send_data pdf_data, filename: 'example.pdf', type: 'application/pdf', disposition: 'attachment'
+  end
+end 

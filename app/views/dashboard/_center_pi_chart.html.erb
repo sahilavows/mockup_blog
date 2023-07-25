@@ -1,0 +1,40 @@
+<div class="col-12 col-sm-4">
+                        <div class="chard-card">
+                          <div class="card">
+                            <div class="card-header">
+                              <i class="fa fa-pie-chart"></i> FW Registration by Sections
+                            </div>
+                            <div class="card-body">
+                              <script type="text/javascript">
+                                google.charts.load('current', {
+                                  'packages': ['corechart']
+                                });
+                                google.charts.setOnLoadCallback(drawChart);
+
+                                function drawChart() {
+ 
+                                  var data = google.visualization.arrayToDataTable(<%=center_pi_chart_data.to_json.html_safe%>);
+ 
+                                  var options = {
+                                    legend: {
+                                      position: 'bottom'
+                                    },
+                                    'width': 275,
+                                    'height': 275,
+                                    'chartArea': {
+                                      'width': '100%',
+                                      'height': '80%'
+                                    },
+                                    vAxis: {
+                                      minValue: 0
+                                    }
+                                  };
+                                  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                                  chart.draw(data, options);
+                                }
+                              </script>
+                              <div id="piechart" style="width: 100%; height:100%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
