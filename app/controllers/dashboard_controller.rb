@@ -4,7 +4,7 @@ class DashboardController < ApplicationController
                                     ["Element", "Density", {
                                       role: "style"
                                     }],
-                                    ["Copper", 8.94, "#b87333"],
+                                    ["Copper", 18.94, "#b87333"],
                                     ["Silver", 10.49, "silver"],
                                     ["Gold", 19.30, "gold"],
                                     ["Platinum", 21.45, "color: #e5e4e2"]
@@ -23,7 +23,7 @@ class DashboardController < ApplicationController
                                     }],
                                     ["Copper", 8.94, "#0e7dc1"],
                                     ["Silver", 10.49, "#29A6A6."],
-                                    ["Gold", 19.30, "#A52A2A"],
+                                    ["Gold", 119.30, "#A52A2A"],
                                     ["Platinum", 21.45, "color: #e5e4e2"]
                                   ]
     @bottom_line_chart_data = [
@@ -33,5 +33,11 @@ class DashboardController < ApplicationController
                                     ['2006', 660, 1120],
                                     ['2007', 1030, 540]
                                   ]
+                      
+  respond_to do |format|
+    format.html{render layout: 'application'} 
+    format.js {render layout: false} # Add this line to you respond_to block
+  end
+
   end
 end

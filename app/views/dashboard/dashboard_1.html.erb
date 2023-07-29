@@ -57,9 +57,26 @@
   </body>
 </html>
 
+<script type="text/javascript">
+    function filter_ajax(){
+      let data = {"state": extract_data('State') }
+      $.ajax({
+        type: "Get", 
+        url: "/dashboard/dashboard_1.js",
+        data: data
+      })
+    }
+    
+    function extract_data(val){
+       var data = Array.from($("#"+val+" input[type=checkbox]"));
+       data = data.filter(x => x.checked).map(x => x.value);
+       return data;
+    }
 
-
-
+    // change.addEventListener("input", function (e) {
+    //     filter_ajax();
+    // });
+</script>
 
 <script type="text/javascript">
   $(document).ready(function() {

@@ -32,11 +32,14 @@ class HomeController < ApplicationController
   end 
 
   def pdf_gen
-    @report_states = Report.all
-    html = File.open("/home/dell/Desktop/blog/app/views/home/_report_table.html.erb").read
-    pdf = Prawn::Document.new
-    pdf.text html.html_safe
-    pdf_data = pdf.render 
-    send_data pdf_data, filename: 'example.pdf', type: 'application/pdf', disposition: 'attachment'
+    @report_states = Report.all 
+    respond_to do |format|
+      format.pdf do
+        pdf = WickedPdf.new.pdf_from_string(
+                render_to_string(partial: "home/report_table",formats: [:html],local: {})
+              )
+              send_data pdf, filename: 'your_file_name.pdf', type: 'application/pdf', disposition: 'attachment'
+        end
+    end 
   end
 end 
