@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="css/stylenew1.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+<div class="dashboard_content">
+
+  <!-- lab_widget -->
+  <%= render 'lab_widget'%>
+
+  <div class="dashboard-chart">
+    <div class="row">
+      <%=render 'right_bar_chart_one',right_chart_data: @right_chart_data%>
+      <%=render 'center_pi_chart',center_pi_chart_data: @center_pi_chart_data %> 
+      <%=render 'left_bar_chart',left_bar_chart_data: @left_bar_chart_data%> 
+      <%=render 'bottom_line_chart',bottom_line_chart: @bottom_line_chart_data%> 
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+wb = xlsx_package.workbook
+
+
+#first sheet 
+wb.add_worksheet(name: 'YourModel Data') do |sheet|
+  # Add headers
+  sheet.add_row ['ID', 'Visa Type', 'User']
+
+  # Add data
+  @data.each do |record|
+    sheet.add_row [record.id, record.visa_type, record.user_id]
+  end
+end
+
+
+#second sheet 
+wb.add_worksheet(name: 'Data') do |sheet|
+  # Add headers
+  sheet.add_row ['ID', 'Visa Type', 'User']
+
+  # Add data
+  @data.each do |record|
+    sheet.add_row [record.id, record.visa_type, record.user_id]
+  end
+end
