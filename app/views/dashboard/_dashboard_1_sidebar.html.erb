@@ -1,4 +1,4 @@
-   <div id="sidebar">
+  <div id="sidebar">
         <div class="filter_row">
           <div class="filter_div">
             <div class="filter">
@@ -14,11 +14,54 @@
                       <div id="time-period" class="collapse show" aria-labelledby="faqhead1" data-parent="#filter">
                         <div class="card-body">
                           <ul class="subment-li">
-                            <li>
-                              <input class="time-period" type="checkbox" value="1 Hours"> 1 Hours
+                            <li class="p-0">
+                              <div class="month-filter mt-2">
+                                <div class="form-group mb-2">
+                                  <div class="input-group">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text input-grouplabel">
+                                        <i class="fa fa-calendar-o"></i>
+                                      </span>
+                                    </div>
+                                    <select class="form-control" aria-label="Filter select">
+                                      <option> Select Monthly </option>
+                                      <option value="January">January</option>
+                                      <option value="February">February</option>
+                                      <option value="March">March</option>
+                                      <option value="April">April</option>
+                                      <option value="May">May</option>
+                                      <option value="June">June</option>
+                                      <option value="July">July</option>
+                                      <option value="August">August</option>
+                                      <option value="September">September</option>
+                                      <option value="October">October</option>
+                                      <option value="November">November</option>
+                                      <option value="December">December</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
                             </li>
-                            <li>
-                              <input class="time-period" type="checkbox" value="2 Hours"> 2 Hours
+                            <li class="p-0">
+                              <div class="month-filter mt-2">
+                                <div class="form-group mb-2">
+                                  <div class="input-group">
+                                    <div class="input-group-append">
+                                      <span class="input-group-text input-grouplabel">
+                                        <i class="fa fa-calendar-o"></i>
+                                      </span>
+                                    </div>
+                                    <select class="form-control" aria-label="Filter select">
+                                      <option> Select Year </option>
+                                      <option value="2019">2019</option>
+                                      <option value="2020">2020</option>
+                                      <option value="2021">2021</option>
+                                      <option value="2022">2022</option>
+                                      <option value="2023">2023</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
                             </li>
                           </ul>
                         </div>
@@ -32,10 +75,10 @@
                         <div class="card-body">
                           <ul class="subment-li">
                             <li>
-                              <input class="sector" type="checkbox" value="1 sector"> 1 Sector
+                              <input type="radio" name="sector" value="Agriculture sector"> Agriculture sector
                             </li>
                             <li>
-                              <input class="sector" type="checkbox" value="1 sector"> 2 Sector
+                              <input type="radio" name="sector" value="Services sector"> Services sector
                             </li>
                           </ul>
                         </div>
@@ -49,10 +92,10 @@
                         <div class="card-body">
                           <ul class="subment-li">
                             <li>
-                              <input class="state" type="checkbox" value="1 state"> 1 State
+                              <input type="radio" name="state" value="1 State"> 1 State
                             </li>
                             <li>
-                              <input class="state" type="checkbox" value="2 state"> 2 State
+                              <input type="radio" name="state" value="2 State"> 2 State
                             </li>
                           </ul>
                         </div>
@@ -66,10 +109,10 @@
                         <div class="card-body">
                           <ul class="subment-li">
                             <li>
-                              <input class="country" type="checkbox" value="1_country"> 1 Country
+                              <input type="radio" name="country" value = "India"> India
                             </li>
                             <li>
-                              <input class="country" type="checkbox" value="1_country"> 2 Country
+                              <input type="radio" name="country" value = "Indonesia"> Indonesia
                             </li>
                           </ul>
                         </div>
@@ -83,13 +126,13 @@
                         <div class="card-body">
                           <ul class="subment-li">
                             <li>
-                              <input class="age" type="checkbox" value="18 to 29"> 18 to 29
+                              <input type="radio" name="age" value="18 to 29"> 18 to 29
                             </li>
                             <li>
-                              <input class="age" type="checkbox" value="30 to 45"> 30 to 45
+                              <input type="radio" name="age" value="30 to 45"> 30 to 45
                             </li>
                             <li>
-                              <input class="age" type="checkbox" value="50 to >"> 50 to >
+                              <input type="radio" name="age" value="50 to >"> 50 to >
                             </li>
                           </ul>
                         </div>
@@ -103,10 +146,10 @@
                         <div class="card-body">
                           <ul class="subment-li">
                             <li>
-                              <input type="radio"> Men
+                              <input type="radio" name="gender" value="Male"> Male
                             </li>
                             <li>
-                              <input type="radio"> Female
+                              <input type="radio" name="gender" value="Female"> Female
                             </li>
                           </ul>
                         </div>
@@ -120,10 +163,13 @@
                         <div class="card-body">
                           <ul class="subment-li">
                             <li>
-                              <input type="checkbox"> 1 Registration
+                              <input type="radio" name="registration" value="Web Portal"> Web Portal
                             </li>
                             <li>
-                              <input type="checkbox"> 2 Registration
+                              <input type="radio" name="registration" value="Agency"> Agency
+                            </li>
+                            <li>
+                              <input type="radio" name="registration" value="Regional Office"> Regional Office
                             </li>
                           </ul>
                         </div>
@@ -137,17 +183,39 @@
                         <div class="card-body">
                           <ul class="subment-li">
                             <li>
-                              <input type="checkbox"> 1 Foregin Worker
+                              <input type="radio" name="foregin_worker_type" value="RTK"> RTK
                             </li>
                             <li>
-                              <input type="checkbox"> 2 Foregin Worker
+                              <input type="radio" name="foregin_worker_type" Value="Normal"> Normal
                             </li>
                           </ul>
                         </div>
                       </div>
                     </div>
+                    <div class="filter-btn">
+                      <button class="btn-apply" data-toggle="collapse" data-target="#tag_demo" onclick="filter_ajax(true)"> Apply</button>
+                      <button class="btn-clear" onclick="filter_ajax(false)">Clear</button>
+                    </div>
                   </div>
                 </div>
+                <div id="result"></div>
+                <script>
+                  // function getValues() {
+                  //   var ele = [];
+                  //   var cb = document.getElementsByName("addcheck");
+                  //   var total = 0;
+                  //   for (var i = 0; i < cb.length; i++) {
+                  //     if (cb[i].checked) {
+                  //       ele.push(cb[i].value);
+                  //     }
+                  //   }
+                  //   if (ele.length > 0) {
+                  //     document.getElementById("result").innerHTML = "You selected " + ele;
+                  //   } else {
+                  //     document.getElementById("result").innerHTML = "You have not selected anything";
+                  //   }
+                  // }
+                </script>
                 <!-- <ul class="list"><li>
         Time Period</li><li>Sector</li><li>State</li><li>Country</li><li>Age</li><li>Gender</li><li>Registration at</li><li>Foregin Worker Type</li></ul> -->
               </div>
@@ -163,6 +231,21 @@
                   </li>
                   <li>
                     <i class="fa fa-file-pdf-o" aria-hidden="true"></i> <a href="/generate_excel"> Excel File</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter">
+              <div class="filter-title"> Refresh <i class="fa fa-repeat" aria-hidden="true"></i>
+              </div>
+              <div class="filter-body">
+                <ul class="subment-li">
+                  <li>
+                    <select class="form-control" aria-label="Filter select">
+                      <option> 5 min </option>
+                      <option value="January">15 min</option>
+                      <option value="February">30 min</option>
+                    </select>
                   </li>
                 </ul>
               </div>

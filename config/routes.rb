@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/dashboard_2',to:'dashboard_2#index'
   get 'dashboard/dashboard_1'
   get 'home/index'
   get 'home/d3_graph'

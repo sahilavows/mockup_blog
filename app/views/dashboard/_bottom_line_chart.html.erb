@@ -1,35 +1,51 @@
-                      <div class="col-12 col-sm-12">
+       <div class="col-12 col-sm-12">
                         <div class="chard-card">
                           <div class="card">
                             <div class="card-header">
                               <i class="fa fa-line-chart" aria-hidden="true"></i> Trend of Foreign Worker Registraion
                             </div>
                             <div class="card-body">
+                              <div class="year-month">
+                                <%@yearly_data.each_with_index do |year|%>
+                                  <span>Year <%=year[0]%> <b><%=year[1]%></b>
+                                  </span>
+                                <%end%>
+                              </div>
                               <script type="text/javascript">
-                                google.charts.load('current', {
-                                  'packages': ['corechart']
-                                });
-                                google.charts.setOnLoadCallback(drawChart);
-
                                 function drawChart() {
+                                  // Define the chart to be drawn.
                                   var data = google.visualization.arrayToDataTable(<%= bottom_line_chart.to_json.html_safe%>);
+                                  // Set chart options
                                   var options = {
-                                    title: 'Company Performance',
-                                    curveType: 'function',
                                     'chartArea': {
-                                      'width': '100%',
+                                      'width': '90%',
                                       'height': '80%'
                                     },
+                                    vAxis: {
+                                      title: ' 2019'
+                                    },
+                                    hAxis: {
+                                      title: 'day'
+                                    },
+                                    seriesType: 'bars',
+                                    series: {
+                                      1: {
+                                        type: 'line'
+                                      }
+                                    },
                                     legend: {
-                                      position: 'bottom'
+                                      position: "none"
                                     }
                                   };
-                                  var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                                  // Instantiate and draw the chart.
+                                  var chart = new google.visualization.ComboChart(document.getElementById('curve_chart'));
                                   chart.draw(data, options);
                                 }
+                                google.charts.setOnLoadCallback(drawChart);
                               </script>
                               <div id="curve_chart" style="width: 100%; height: 500px"></div>
                             </div>
                           </div>
                         </div>
                       </div>
+                    
