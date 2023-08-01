@@ -159,6 +159,7 @@ GEM
     nokogiri (1.15.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    pdfkit (0.8.7.3)
     pg (1.5.3)
     pg_search (2.3.6)
       activerecord (>= 5.2)
@@ -261,6 +262,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jquery-rails
+  pdfkit
   pg
   pg_search
   puma (~> 5.0)

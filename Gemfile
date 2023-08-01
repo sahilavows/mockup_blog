@@ -7,7 +7,7 @@ ruby "2.7.7"
 gem "rails"
 #for ajax request
 gem 'jquery-rails'
-
+gem 'pdfkit'
 # for debugging 
 gem 'byebug'
 

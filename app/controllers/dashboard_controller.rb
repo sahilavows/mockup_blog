@@ -10,17 +10,29 @@ class DashboardController < ApplicationController
   end
 
   def generate_pdf
-    @report_states = Report.all 
-    respond_to do |format|
-      format.pdf do
-        pdf = WickedPdf.new.pdf_from_string(
-                # render_to_string(partial: "dashboard/left_bar_chart",formats: [:html],local: {left_bar_chart_data: @left_bar_chart_data},layout: 'pdf_layout')
-                # render_to_string(partial: "dashboard/dashboard_body",formats: [:html],local: {},layout: 'pdf_layout')
-                render_to_string(template: "dashboard/dashboard_1",formats: [:html],local: {},layout: 'pdf_layout')
-              )
-              send_data pdf, filename: 'your_file_name.pdf', type: 'application/pdf', disposition: 'attachment'
-        end
-    end 
+    html = render_to_string(template: 'dashboard/dashboard_1',formats: [:html],layout: false)
+    pdf = PDFKit.new(html)
+    # byebug
+    # # # Set PDF options if needed (e.g., page size, margins, etc.)
+    pdf = PDFKit.new(html, page_size: 'Letter', margin_top: '0.5in')
+    # # send_data pdf, filename: 'example.pdf', type: 'application/pdf'
+    pdf = WickedPdf.new.pdf_from_string(pdf.source.to_s)
+    # render plain: pdf.source
+    # # Send the PDF as a download to the user
+    send_data pdf, filename: 'example.pdf', type: 'application/pdf', disposition: 'attachment'
+    
+
+    # # @report_states = Report.all 
+    # respond_to do |format|
+    #   format.pdf do
+    #     pdf = WickedPdf.new.pdf_from_string(
+    #             # render_to_string(partial: "dashboard/left_bar_chart",formats: [:html],local: {left_bar_chart_data: @left_bar_chart_data},layout: 'pdf_layout')
+    #             # render_to_string(partial: "dashboard/dashboard_body",formats: [:html],local: {},layout: 'pdf_layout')
+    #             render_to_string(template: "dashboard/dashboard_1",formats: [:html],local: {},layout: 'pdf_layout')
+    #           )
+    #           send_data pdf, filename: 'your_file_name.pdf', type: 'application/pdf', disposition: 'attachment'
+    #     end
+    # end 
   end 
 
   def generate_excel
