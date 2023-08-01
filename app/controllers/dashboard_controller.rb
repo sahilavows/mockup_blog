@@ -10,29 +10,8 @@ class DashboardController < ApplicationController
   end
 
   def generate_pdf
-    html = render_to_string(template: 'dashboard/dashboard_1',formats: [:html],layout: false)
-    pdf = PDFKit.new(html)
-    # byebug
-    # # # Set PDF options if needed (e.g., page size, margins, etc.)
-    pdf = PDFKit.new(html, page_size: 'Letter', margin_top: '0.5in')
-    # # send_data pdf, filename: 'example.pdf', type: 'application/pdf'
-    pdf = WickedPdf.new.pdf_from_string(pdf.source.to_s)
-    # render plain: pdf.source
-    # # Send the PDF as a download to the user
+    pdf = generate_pdf_1
     send_data pdf, filename: 'example.pdf', type: 'application/pdf', disposition: 'attachment'
-    
-
-    # # @report_states = Report.all 
-    # respond_to do |format|
-    #   format.pdf do
-    #     pdf = WickedPdf.new.pdf_from_string(
-    #             # render_to_string(partial: "dashboard/left_bar_chart",formats: [:html],local: {left_bar_chart_data: @left_bar_chart_data},layout: 'pdf_layout')
-    #             # render_to_string(partial: "dashboard/dashboard_body",formats: [:html],local: {},layout: 'pdf_layout')
-    #             render_to_string(template: "dashboard/dashboard_1",formats: [:html],local: {},layout: 'pdf_layout')
-    #           )
-    #           send_data pdf, filename: 'your_file_name.pdf', type: 'application/pdf', disposition: 'attachment'
-    #     end
-    # end 
   end 
 
   def generate_excel
@@ -87,5 +66,34 @@ class DashboardController < ApplicationController
                                     ['November ', 9, 8.5],
                                     ['December', 10, 9.5]
                                   ]                      
-    end 
+    end
+
+    def generate_pdf_1
+      # Initialize a headless browser (you can use other drivers like Chrome, Firefox, etc. as well)
+      options = Selenium::WebDriver::Chrome::Options.new
+      options.add_argument('--headless')
+      driver = Selenium::WebDriver.for(:chrome, options: options)
+
+      begin
+        # Load the web page
+        driver.navigate.to 'http://localhost:3000/dashboard/dashboard_1' # Replace with the URL you want to generate PDF for
+
+        # Wait for the page to load (you can adjust the wait time if needed)
+        wait = Selenium::WebDriver::Wait.new(timeout: 10)
+        wait.until { driver.execute_script('return document.readyState') == 'complete' }
+
+        # Get the rendered HTML after the page is loaded
+        rendered_html = driver.page_source
+
+        # Convert the HTML to PDF using Wicked PDF
+        pdf = WickedPdf.new.pdf_from_string(rendered_html)
+
+        # Save or send the PDF file as you prefer
+        # File.open('output.pdf', 'wb') { |file| file << pdf }
+      ensure
+        # Close the headless browser after use
+        driver.quit if driver
+      end
+      pdf 
+  end 
 end

@@ -12,6 +12,8 @@
     <%= wicked_pdf_javascript_include_tag 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js'%>
     <%= wicked_pdf_javascript_include_tag 'https://www.gstatic.com/charts/loader.js' %>
     <%= wicked_pdf_javascript_include_tag %>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+</script>
   </head>
   <body>
     <div class="header">
@@ -46,7 +48,6 @@
 
 <script type="text/javascript">
     function filter_ajax(val){
-      debugger
       if (val == true){
        $.ajax({
         type: "Get", 
