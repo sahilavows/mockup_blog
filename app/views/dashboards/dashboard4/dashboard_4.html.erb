@@ -1,0 +1,2657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fomema Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/stylenew11.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+  <span class="logo"> <img src="../../logo.png"> </span></a>
+</nav>
+</div>
+  <div class="pagetitle"> <i class="fa fa-angle-left" id="sidebarCollapse"></i> Dashboard </div>
+  <div class="chard-box mt-2 border-top pt-2">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="tags collapse" id="tag_demo">
+        <span>Agriculture</span>
+        <span>Customer</span>
+        <span>Registration Medium </span>
+        <span>18 to 29</span>
+        <span>Men </span>
+        <a  class="close"  data-toggle="collapse" data-target="#tag_demo" style="font-size: 18px;">&times;</a>
+      </div>
+    </div>
+ 
+  </div>
+</div>
+<div class="chard-box">
+ <div class="wrapper">
+
+        <!-- Sidebar  -->
+        <div id="sidebar">
+          <div class="filter_row">
+   <div class="filter_div mt-2">
+  <div class="filter">
+  <div class="filter-title">
+    Filter By
+
+  </div>
+  <div class="filter-body">
+    <div id="main">
+      <div class="filtereaccordion" id="filter">
+        <div class="card">
+            <div class="card-header" id="faqhead1">
+                <a href="#" class="filter-link" data-toggle="collapse" data-target="#time-period"
+                aria-expanded="true" aria-controls="time-period">
+                
+Sector</a>
+            </div>
+
+            <div id="time-period" class="collapse show" aria-labelledby="faqhead1" data-parent="#filter">
+                <div class="card-body">
+                    <ul class="subment-li">
+                        <li>
+                            <input type="radio" name="addcheck">  Agriculture sector
+                        </li>
+                        <li>
+                            <input type="radio" name="addcheck">  Services sector
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="filter2">
+                <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#Sector"
+                aria-expanded="true" aria-controls="Sector">Customer Type</a>
+            </div>
+
+            <div id="Sector" class="collapse" aria-labelledby="filter2" data-parent="#filter">
+                <div class="card-body">
+                  <ul class="subment-li">
+                      <li>
+                          <input type="radio" name="addcheck"> 1 Customer Type
+                      </li>
+                      <li>
+                          <input type="radio" name="addcheck"> 2 Customer Type
+                      </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="filter3">
+                <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#State"
+                aria-expanded="true" aria-controls="State">Registration Medium</a>
+            </div>
+
+            <div id="State" class="collapse" aria-labelledby="filter3" data-parent="#filter">
+                <div class="card-body">
+                  <ul class="subment-li">
+                      <li>
+                          <input type="radio" name="addcheck">  1 Registration Medium
+                      </li>
+                      <li>
+                          <input type="radio" name="addcheck">  2 Registration Medium
+                      </li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="filter4">
+              <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#Country"
+              aria-expanded="true" aria-controls="Country">Age Group</a>
+          </div>
+
+          <div id="Country" class="collapse" aria-labelledby="filter4" data-parent="#filter">
+              <div class="card-body">
+                <ul class="subment-li">
+                    <li>
+                        <input type="radio" name="addcheck">  18 to 29
+                    </li>
+                    <li>
+                        <input type="radio" name="addcheck">  30 to 45
+                    </li>
+                    <li>
+                      <input type="radio" name="addcheck">  50 to >
+                  </li>
+                </ul>
+              </div>
+          </div>
+      </div>
+      
+      <div class="card">
+          <div class="card-header" id="filter5">
+              <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#age"
+              aria-expanded="true" aria-controls="age">Gender</a>
+          </div>
+
+          <div id="age" class="collapse" aria-labelledby="filter5" data-parent="#filter">
+              <div class="card-body">
+                <ul class="subment-li">
+                    <li>
+                        <input type="radio" name="addcheck">   Men
+                    </li>
+                    <li>
+                        <input type="radio" name="addcheck">  Female
+                    </li>
+                </ul>
+              </div>
+          </div>
+      </div> 
+
+      <div class="filter-btn mb-2"> 
+        <button class="btn-apply" data-toggle="collapse" data-target="#tag_demo"> Apply</button>  
+        <button class="btn-clear" >Clear</button>
+      </div>
+    </div>
+         </div>
+    <!-- <ul class="list">
+      <li>
+        Time Period</li>
+<li>Sector</li>
+<li>State</li>
+<li>Country</li>
+<li>Age</li>
+<li>Gender</li>
+<li>Registration at</li>
+<li>Foregin Worker Type</li>
+    </ul> -->
+  </div> 
+
+</div>
+ 
+<div>
+</div>
+  </div> 
+
+</div>
+
+             
+        </div>
+
+        <!-- Page Content  -->
+        <div id="content">
+                     <div class="dashboard-body mt-2">
+<div class="container-fluid">
+  <div class="row">
+ <div class="col-12">
+  <div id="main">
+  <div class="accordion" id="faq">
+                      <div class="card">
+                          <div class="card-header" id="faqhead1">
+                              <a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#faq1"
+                              aria-expanded="true" aria-controls="faq1">Chart</a>
+                          </div>
+  
+                          <div id="faq1" class="collapse show" aria-labelledby="faqhead1" data-parent="#faq">
+                              <div class="card-body">
+                                <div class="div_Chartone box" style="display: block!important;">
+                                  <div>
+                                    <div class="row">
+                                      <div class="col-12 col-sm-4">
+                                        <div class="chard-card">
+                                          <div class="card">
+                                <div class="card-header">
+                                <i class="fa fa-bar-chart" ></i>
+                                Type of Customer
+                                </div>
+                                
+                                  <div class="card-body">    
+                                
+                                      <script type="text/javascript">
+                                        google.charts.load('current', {'packages':['corechart']});
+                                        google.charts.setOnLoadCallback(drawChart);
+                                  
+                                        function drawChart() {
+                                  
+                                          var data = google.visualization.arrayToDataTable([
+                                            ['Task', 'Hours per Day'],
+                                            ['Individual Employer',   30],
+                                            ['Company Employer', 20],
+                                            ['Agent',    7]
+                                          ]);
+                                  
+                                          var options = {
+                                  
+                                             legend: { position: 'bottom'},
+                                                           'chartArea':{'width':'100%','height':'80%'},
+                                              vAxis: {minValue: 0}
+                                          };
+                                  
+                                          var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                                  
+                                          chart.draw(data, options);
+                                        }
+                                      </script>
+                                   
+                                      <div id="piechart" style="width: 100%; height:100%;"></div>
+                                  </div>
+                                
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                  Respondents Age Group
+                                </div>
+                                <div class="card-body">
+                                  <script type="text/javascript">
+                                      google.charts.load("current", {packages:["corechart"]});
+                                      google.charts.setOnLoadCallback(drawChart);
+                                      function drawChart() {
+                                        var data = google.visualization.arrayToDataTable([
+                                          ['Task', 'Hours per Day'],
+                                          ['45-54', 5],
+                                          ['55-64', 2],
+                                          ['35-44', 2],
+                                          ['25-34', 2],
+                                          ['More than 65',5],
+                                          ['18-24', 7]
+                                        ]);
+                                
+                                        var options = {
+                                          legend: { position: 'bottom'},
+                                          'chartArea':{'width':'100%','height':'80%'},
+                                          pieHole: 0.4,
+                                        };
+                                
+                                        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+                                        chart.draw(data, options);
+                                      }
+                                    </script>
+                                  </head>
+                                  
+                                    <div id="donutchart" style="width:100%; height:100%;"></div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                  Registration Medium
+                                </div>
+                                <div class="card-body">    
+                                
+                                  <script type="text/javascript">
+                                    google.charts.load('current', {'packages':['corechart']});
+                                    google.charts.setOnLoadCallback(drawChart);
+                                
+                                    function drawChart() {
+                                
+                                      var data = google.visualization.arrayToDataTable([
+                                        ['Task', 'Hours per Day'],
+                                        ['Web portal',   30],
+                                        ['Regional Office',    7]
+                                      ]);
+                                
+                                      var options = {
+                                
+                                         legend: { position: 'bottom'},
+                                                       'chartArea':{'width':'100%','height':'80%'},
+                                          vAxis: {minValue: 0}
+                                      };
+                                
+                                      var chart = new google.visualization.PieChart(document.getElementById('piechartone'));
+                                
+                                      chart.draw(data, options);
+                                    }
+                                  </script>
+                                
+                                  <div id="piechartone" style="width: 100%; height:100%;"></div>
+                                </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                  Respondents Gender
+                                </div>
+                                <div class="card-body">
+                                    
+                                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                                  <script type="text/javascript">
+                                      google.charts.load("current", {packages:["corechart"]});
+                                      google.charts.setOnLoadCallback(drawChart);
+                                      function drawChart() {
+                                    var data = google.visualization.arrayToDataTable([
+                                      ['Gender', 'persons', { role: 'style' } ],
+                                      ['Female', 18, 'color: #a1343c'],
+                                      ['Male', 14, 'color: #0d6abf']
+                                    ]);
+                                  
+                                        var view = new google.visualization.DataView(data);
+                                        view.setColumns([0, 1,
+                                                         { calc: "stringify",
+                                                           sourceColumn: 1,
+                                                           type: "string",
+                                                           role: "annotation" },
+                                                         2]);
+                                  
+                                                         var options = {
+                                 hAxis: {
+                                   title: 'No of Respodents',
+                                   titleTextStyle: {
+                                     color: '#000000',
+                                   },
+                                   slantedText:true,
+                                  },
+                                 vAxis: {
+                                   title: 'Genders'
+                                 },
+                                  'chartArea': {'width': '90%'}, legend: { position: 'None'},
+                                  
+                                };
+                                        var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+                                        chart.draw(view, options);
+                                    }
+                                    </script>
+                                   <div id="barchart_values" style="width:100%;"></div>
+                                
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                  Respondent's Worker Sector
+                                </div>
+                                <div class="card-body">
+                                  <script type="text/javascript">
+                                    google.charts.load('current', {packages: ['corechart', 'bar']});
+                                    google.charts.setOnLoadCallback(drawStacked);
+                                    function drawStacked() {/* w  w w  . j  a  v a  2  s  .  c  om*/
+                                      var data = new google.visualization.DataTable();
+                                      data.addColumn('string', 'Sector');
+                                       data.addColumn('number', 'Sector');
+                                      data.addRows([
+                                      ["Domestic Helper/ Maid", 8.94,],
+                                            ["Services/Hospitality", 10.49,],
+                                            ["Manufacturing", 19.30],
+                                            ["Construction", 21.45],
+                                            ["Agriculture", 18.45],
+                                            ["Plantation", 10.45]
+                                      ]);
+                                      
+                                      var options = {
+                                        hAxis: {
+                                          title: 'Sector',
+                                          titleTextStyle: {
+                                            color: '#000000',
+                                          },
+                                          slantedText:true,
+                                          slantedTextAngle:45,
+                                        },
+                                        vAxis: {
+                                          title: 'Number of Respondents'
+                                        },
+                                        
+                                         'chartArea': {'width': '90%'},
+                                         
+                                      };
+                                      var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_values'));
+                                      chart.draw(data, options);
+                                    }
+                                    </script>
+                                    <div id="columnchart_values" style="width: 100%; height:100%;"></div>
+                                  <script type="text/javascript">
+                                    google.charts.load("current", {packages:['corechart']});
+                                    google.charts.setOnLoadCallback(drawChart);
+                                    function drawChart() {
+                                      var data = google.visualization.arrayToDataTable([
+                                        ["Element", "Density", { role: "style" } ],
+                                        ["Domestic Helper/ Maid", 8.94, "#3366cc"],
+                                        ["Services/Hospitality", 10.49, "#0099c6"],
+                                        ["Manufacturing", 19.30, "#dc3912"],
+                                        ["Construction", 21.45, "#ff9900"],
+                                        ["Agriculture", 18.45, "#109618"],
+                                        ["Plantation", 10.45, "#990099"]
+                                      ]);
+                                
+                                      var view = new google.visualization.DataView(data);
+                                      view.setColumns([0, 1,
+                                                       { calc: "stringify",
+                                                         sourceColumn: 1,
+                                                         type: "string",
+                                                         role: "annotation" },
+                                                       2]);
+                                
+                                      var options = {
+                                        'chartArea': {'width': '100%', 'height': '80%'},
+                                            vAxis: { gridlines: { count: 6 } },
+                                        legend: { position: "none" },
+                                        
+                                      };
+                                      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+                                      chart.draw(view, options);
+                                  }
+                                  </script>
+                                <div id="columnchart_values" style="width: 100%; height:100%;"></div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                  Trendline Number of Respondents
+                                </div>
+                                <div class="card-body">
+                                  <script type="text/javascript">
+                                      google.charts.load('current', {'packages':['corechart']});
+                                      google.charts.setOnLoadCallback(drawChart);
+                                
+                                      function drawChart() {
+                                        var data = google.visualization.arrayToDataTable([
+                                          ['Year', 'No of Respondents'],
+                                          ['Jan 2023',  1000],
+                                          ['Feb 2023',  1170],
+                                          ['March 2023',  660],
+                                          ['April 2023',  1030]
+                                        ]);
+                                
+                                        var options = {
+                                          curveType: 'function',
+                                          'chartArea': {'width': '100%', 'height': '70%'},
+                                          hAxis: {
+                                          title: 'Year',
+                                          titleTextStyle: {
+                                            color: '#000000',
+                                          },
+                                          slantedText:true,
+                                          slantedTextAngle:45,
+                                        },
+                                        vAxis: {
+                                          title: 'Number of Respondents'
+                                        },
+                                        
+                                         'chartArea': {'width': '90%'},
+                                          legend: { position: 'none' }
+                                        };
+                                        
+                                
+                                        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                                
+                                        chart.draw(data, options);
+                                      }
+                                    </script>
+                                 
+                                    <div id="curve_chart"></div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                  Overall Satisfaction Level
+                                   
+                                </div>
+                                <div class="card-body">
+                                 <div class="card-svg">
+                                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                                <g id="Capa_1">
+                                <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                                <g>
+                                  <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                    c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                    c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                    c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                    c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                    C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                  <g>
+                                    <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                      C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                    <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                      C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                    <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                      C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                    <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                      C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                    <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                      C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                    <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                      c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                  </g>
+                                </g>
+                                <g>
+                                  <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                  <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                  <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                                </g>
+                                </g>
+                                <g id="Capa_2">
+                                <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                  c0,0,56.244,61.509,58.751,189.372"/>
+                                <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">1.00</text>
+                                 <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2.00</text>
+                                <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                 <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">3.00</text>
+                                <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                 <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                
+                                <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">4.00</text>
+                                <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">5.00</text>
+                                <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                                </g>
+                                </svg>
+                                 </div>
+                                 <div class="svgresult">
+                                  4.12
+                                 </div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                
+                                  Satisfaction Level towards Employer's Registration
+                                   
+                                </div>
+                                <div class="card-body">
+                                  <div class="card-svg">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                                <g id="Capa_1">
+                                  <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                                  <g>
+                                    <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                      c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                      c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                      c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                      c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                      C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                    <g>
+                                      <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                        C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                      <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                        C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                      <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                        C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                      <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                        C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                      <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                        C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                      <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                        c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                    <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                    <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                                  </g>
+                                </g>
+                                <g id="Capa_2">
+                                  <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                    c0,0,56.244,61.509,58.751,189.372"/>
+                                  <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">1.00</text>
+                                   <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2.00</text>
+                                  <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">3.00</text>
+                                  <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                 
+                                  <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">4.00</text>
+                                  <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">5.00</text>
+                                  <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                                </g>
+                                </svg>
+                                   </div>
+                                   <div class="svgresult">
+                                    4.12
+                                   </div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                
+                                  Satisfaction Level in choosing FOMEMA Panel Clinic/X-ray
+                                    
+                                </div>
+                                <div class="card-body">
+                                  <div class="card-svg">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                                <g id="Capa_1">
+                                  <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                                  <g>
+                                    <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                      c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                      c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                      c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                      c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                      C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                    <g>
+                                      <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                        C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                      <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                        C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                      <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                        C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                      <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                        C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                      <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                        C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                      <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                        c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                    <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                    <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                                  </g>
+                                </g>
+                                <g id="Capa_2">
+                                  <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                    c0,0,56.244,61.509,58.751,189.372"/>
+                                  <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">1.00</text>
+                                   <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2.00</text>
+                                  <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">3.00</text>
+                                  <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                 
+                                  <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">4.00</text>
+                                  <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">5.00</text>
+                                  <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                                </g>
+                                </svg>
+                                   </div>
+                                   <div class="svgresult">
+                                    4.12
+                                   </div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header"> 
+                                  Satisfaction Level towards Worker's Registration
+                                   
+                                </div>
+                                <div class="card-body">
+                                  <div class="card-svg">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                                <g id="Capa_1">
+                                  <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                                  <g>
+                                    <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                      c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                      c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                      c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                      c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                      C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                    <g>
+                                      <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                        C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                      <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                        C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                      <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                        C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                      <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                        C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                      <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                        C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                      <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                        c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                    <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                    <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                                  </g>
+                                </g>
+                                <g id="Capa_2">
+                                  <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                    c0,0,56.244,61.509,58.751,189.372"/>
+                                  <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">1.00</text>
+                                   <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2.00</text>
+                                  <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">3.00</text>
+                                  <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                 
+                                  <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">4.00</text>
+                                  <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">5.00</text>
+                                  <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                                </g>
+                                </svg>
+                                   </div>
+                                   <div class="svgresult">
+                                    4.12
+                                   </div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header"> 
+                                  Location of Panel Clinic is Nearby
+                                  
+                                </div>
+                                <div class="card-body">
+                                  <div class="card-svg">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                                <g id="Capa_1">
+                                  <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                                  <g>
+                                    <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                      c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                      c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                      c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                      c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                      C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                    <g>
+                                      <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                        C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                      <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                        C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                      <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                        C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                      <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                        C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                      <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                        C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                      <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                        c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                    <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                    <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                                  </g>
+                                </g>
+                                <g id="Capa_2">
+                                  <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                    c0,0,56.244,61.509,58.751,189.372"/>
+                                  <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">1.00</text>
+                                   <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2.00</text>
+                                  <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">3.00</text>
+                                  <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                 
+                                  <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">4.00</text>
+                                  <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">5.00</text>
+                                  <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                                </g>
+                                </svg>
+                                   </div>
+                                   <div class="svgresult">
+                                    4.12
+                                   </div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                
+                                  Process of Medical Examinations are understandable
+                                  
+                                </div>
+                                <div class="card-body">
+                                  <div class="card-svg">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                                <g id="Capa_1">
+                                  <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                                  <g>
+                                    <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                      c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                      c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                      c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                      c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                      C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                    <g>
+                                      <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                        C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                      <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                        C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                      <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                        C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                      <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                        C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                      <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                        C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                      <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                        c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                    <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                    <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                                  </g>
+                                </g>
+                                <g id="Capa_2">
+                                  <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                    c0,0,56.244,61.509,58.751,189.372"/>
+                                  <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">1.00</text>
+                                   <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2.00</text>
+                                  <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">3.00</text>
+                                  <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                 
+                                  <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">4.00</text>
+                                  <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">5.00</text>
+                                  <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                                </g>
+                                </svg>
+                                   </div>
+                                   <div class="svgresult">
+                                    4.12
+                                   </div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header">
+                                  
+                                  The results of Medical Examinations are Easily Obtainable
+                                   
+                                </div>
+                                <div class="card-body">
+                                  <div class="card-svg">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                                <g id="Capa_1">
+                                  <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                                  <g>
+                                    <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                      c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                      c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                      c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                      c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                      C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                    <g>
+                                      <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                        C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                      <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                        C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                      <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                        C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                      <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                        C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                      <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                        C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                      <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                        c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                    <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                    <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                                  </g>
+                                </g>
+                                <g id="Capa_2">
+                                  <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                    c0,0,56.244,61.509,58.751,189.372"/>
+                                  <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">1.00</text>
+                                   <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2.00</text>
+                                  <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">3.00</text>
+                                  <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                 
+                                  <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">4.00</text>
+                                  <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">5.00</text>
+                                  <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                                </g>
+                                </svg>
+                                   </div>
+                                   <div class="svgresult">
+                                    4.12
+                                   </div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header"> 
+                                  Overall Satisfaction Towards FOMEMA Examinations
+                                  
+                                </div>
+                                <div class="card-body">
+                                  <div class="card-svg">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                                <g id="Capa_1">
+                                  <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                                  <g>
+                                    <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                      c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                      c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                      c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                      c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                      C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                    <g>
+                                      <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                        C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                      <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                        C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                      <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                        C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                      <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                        C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                      <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                        C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                      <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                        c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                    </g>
+                                  </g>
+                                  <g>
+                                    <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                    <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                    <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                                  </g>
+                                </g>
+                                <g id="Capa_2">
+                                  <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                    c0,0,56.244,61.509,58.751,189.372"/>
+                                  <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">1.00</text>
+                                   <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2.00</text>
+                                  <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">3.00</text>
+                                  <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                   <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                 
+                                  <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">4.00</text>
+                                  <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">5.00</text>
+                                  <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                  <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462"></text>
+                                  <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                                </g>
+                                </svg>
+                                   </div>
+                                   <div class="svgresult">
+                                    4.12
+                                   </div>
+                                  </div>
+                                
+                                            </div>
+                                          </div>
+                                        </div>
+                                        </div>
+                                        <div class="row"> 
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header"> 
+                                  Employer's Worker That Undergo
+                                </div>
+                                
+                                  <div class="card-body">    
+                                
+                                    <script type="text/javascript">
+                                      google.charts.load('current', {'packages':['corechart']});
+                                      google.charts.setOnLoadCallback(drawChart);
+                                
+                                      function drawChart() {
+                                
+                                        var data = google.visualization.arrayToDataTable([
+                                          ['Task', 'Hours per Day',{ role: "style" }],
+                                          ['Web portal',   30, "#c5deee"],
+                                          ['Reginal Office',    7, "#0099c6"]
+                                        
+                                        ]);
+                                
+                                        var options = {
+                                          title: "Did you know the", 
+                                           legend: { position: 'bottom'},
+                                                         'chartArea':{'width':'100%','height':'80%'},
+                                            vAxis: {minValue: 0},
+                                            pieHole: 0.4
+                                
+                                        };
+                                
+                                        var chart = new google.visualization.PieChart(document.getElementById('piechartone1'));
+                                
+                                        chart.draw(data, options);
+                                      }
+                                    </script>
+                                 
+                                    <div id="piechartone1" style="width: 100%; height:100%;"></div>
+                                </div>
+                                             </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header"> 
+                                  Employer's Worker That Undergo
+                                </div>
+                                <div class="card-body">    
+                                
+                                  <script type="text/javascript">
+                                    google.charts.load('current', {'packages':['corechart']});
+                                    google.charts.setOnLoadCallback(drawChart);
+                                
+                                    function drawChart() {
+                                
+                                      var data = google.visualization.arrayToDataTable([
+                                        ['Task', 'Hours per Day',{ role: "style" }],
+                                        ['No',   30, "#c5deee"],
+                                        ['yes',    7, "#0099c6"]
+                                      
+                                      ]);
+                                
+                                      var options = {
+                                        title: "Did your Worker..", 
+                                         legend: { position: 'bottom'},
+                                         'chartArea':{'width':'100%','height':'80%'},
+                                         pieHole: 0.4,
+                                          vAxis: {minValue: 0}
+                                      };
+                                
+                                      var chart = new google.visualization.PieChart(document.getElementById('piechartone2'));
+                                
+                                      chart.draw(data, options);
+                                    }
+                                  </script>
+                                
+                                  <div id="piechartone2" style="width: 100%; height:100%;"></div>
+                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12 col-sm-4">
+                                          <div class="chard-card">
+                                            <div class="card">
+                                <div class="card-header"> 
+                                  Overall Rating for Appeal Process  </div>
+                                <div class="card-body">
+                                  
+                                  <script type="text/javascript">
+                                   google.charts.load('current', {
+                                callback: function () {
+                                  var data = [
+                                    ['Task', 'Hours',],
+                                    ['A',  35],
+                                    ['B',  15],
+                                    [null, 50.0]
+                                  ];
+                                
+                                  var total = 0;
+                                  for (var i = 1; i < data.length; i++) {
+                                    if (data[i][0] !== null) {
+                                      total += data[i][1];
+                                    }
+                                  }
+                                
+                                  var numberFormat = new google.visualization.NumberFormat({
+                                    pattern: '#,##0.0',
+                                    suffix: '%'
+                                  });
+                                
+                                  var dataTable = google.visualization.arrayToDataTable(data);
+                                  for (var i = 0; i < dataTable.getNumberOfRows(); i++) {
+                                    if (dataTable.getValue(i, 0) !== null) {
+                                      dataTable.setFormattedValue(i, 1, numberFormat.formatValue(((dataTable.getValue(i, 1) / total) * 100)));
+                                    }
+                                  }
+                                
+                                  var chart = new google.visualization.PieChart(document.getElementById('chart_div12'));
+                                
+                                  var options = {
+                                     chartArea: {
+                                      top: 24
+                                    },
+                                    colors: ['#64B5F6', '#e3e3e3'],
+                                    legend: 'none',
+                                    pieHole: 0.4,
+                                    pieStartAngle: 270,
+                                    pieSliceText: 'value',
+                                    slices: {
+                                      2: {
+                                        color: 'transparent'
+                                      }
+                                    },
+                                    theme: 'maximized',
+                                    'chartArea':{'width':'100%','height':'100%'},
+                                  };
+                                
+                                  chart.draw(dataTable, options);
+                                },
+                                packages: ['corechart']
+                                });
+                                  </script>
+                                  <div id="chart_div12"></div>
+                                
+                                  </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="faqhead4">
+                            <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq4"
+                            aria-expanded="true" aria-controls="faq4">Respondent's Social Media Preference
+                          </a>
+                        </div>
+
+                        <div id="faq4" class="collapse" aria-labelledby="faqhead4" data-parent="#faq">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col socialmedia-card"> 
+                      <div class="chard-card">
+                        <div class="card">
+             
+            <div class="card-body">
+             <div class="div-socialmedia">
+               
+              <div class="social-mediaicon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="facebook"><path fill="#1976D2" d="M14 0H2C.897 0 0 .897 0 2v12c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V2c0-1.103-.897-2-2-2z"/><path fill="#FAFAFA" fill-rule="evenodd" d="M13.5 8H11V6c0-.552.448-.5 1-.5h1V3h-2a3 3 0 0 0-3 3v2H6v2.5h2V16h3v-5.5h1.5l1-2.5z" clip-rule="evenodd"/></svg>
+                
+              </div>
+              <div class="social-mediavalue"> 
+                <span>206</span>
+                <span> Facebook</span>
+               </div>
+             
+             </div>
+            </div>
+             </div>
+             </div> 
+            
+                    </div>
+                    <div class="col  socialmedia-card">          <div class="chard-card">
+                        <div class="card">
+             
+            <div class="card-body">
+             <div class="div-socialmedia">
+               
+              <div class="social-mediaicon"><svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 16 16" id="instagram"><linearGradient id="a" x1="1.464" x2="14.536" y1="14.536" y2="1.464" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><path fill="url(#a)" d="M11 0H5a5 5 0 0 0-5 5v6a5 5 0 0 0 5 5h6a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zm3.5 11c0 1.93-1.57 3.5-3.5 3.5H5c-1.93 0-3.5-1.57-3.5-3.5V5c0-1.93 1.57-3.5 3.5-3.5h6c1.93 0 3.5 1.57 3.5 3.5v6z"></path><linearGradient id="b" x1="5.172" x2="10.828" y1="10.828" y2="5.172" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><path fill="url(#b)" d="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 6.5A2.503 2.503 0 0 1 5.5 8c0-1.379 1.122-2.5 2.5-2.5s2.5 1.121 2.5 2.5c0 1.378-1.122 2.5-2.5 2.5z"></path><linearGradient id="c" x1="11.923" x2="12.677" y1="4.077" y2="3.323" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFC107"></stop><stop offset=".507" stop-color="#F44336"></stop><stop offset=".99" stop-color="#9C27B0"></stop></linearGradient><circle cx="12.3" cy="3.7" r=".533" fill="url(#c)"></circle></svg>
+                
+              </div>
+              <div class="social-mediavalue"> 
+                   <span>55</span>
+                   <span> Instagram</span>
+            </div>
+              </div>
+            </div>
+             </div>
+             </div> 
+            
+             
+                    </div>
+                    <div class="col socialmedia-card">          <div class="chard-card">
+                        <div class="card">
+             
+            <div class="card-body">
+             <div class="div-socialmedia">
+               
+              <div class="social-mediaicon">
+                <svg xmlns="http://www.w3.org/2000/svg"  ><path fill="#03A9F4" d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"/></svg>
+              </div>
+              <div class="social-mediavalue"> <span>27</span><span>
+                Twitter 
+               </span>
+               </div>
+             
+             </div>
+            </div>
+             </div>
+             </div> 
+                    </div>
+                    <div class="col socialmedia-card">          <div class="chard-card">
+                        <div class="card">
+             
+            <div class="card-body">
+             <div class="div-socialmedia">
+               
+              <div class="social-mediaicon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45"><path fill="#29b6f6" d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"/><path fill="#fff" d="M33.95,15l-3.746,19.126c0,0-0.161,0.874-1.245,0.874c-0.576,0-0.873-0.274-0.873-0.274l-8.114-6.733 l-3.97-2.001l-5.095-1.355c0,0-0.907-0.262-0.907-1.012c0-0.625,0.933-0.923,0.933-0.923l21.316-8.468 c-0.001-0.001,0.651-0.235,1.126-0.234C33.667,14,34,14.125,34,14.5C34,14.75,33.95,15,33.95,15z"/><path fill="#b0bec5" d="M23,30.505l-3.426,3.374c0,0-0.149,0.115-0.348,0.12c-0.069,0.002-0.143-0.009-0.219-0.043 l0.964-5.965L23,30.505z"/><path fill="#cfd8dc" d="M29.897,18.196c-0.169-0.22-0.481-0.26-0.701-0.093L16,26c0,0,2.106,5.892,2.427,6.912 c0.322,1.021,0.58,1.045,0.58,1.045l0.964-5.965l9.832-9.096C30.023,18.729,30.064,18.416,29.897,18.196z"/></svg>
+              </div>
+              <div class="social-mediavalue"> <span>55</span><span>
+                Telegram 
+               </span>
+               </div>
+             
+             </div>
+            </div>
+             </div>
+             </div> 
+            
+                    </div>
+                    <div class="col socialmedia-card">          <div class="chard-card">
+                        <div class="card">
+             
+            <div class="card-body">
+             <div class="div-socialmedia">
+               
+              <div class="social-mediaicon">
+                <svg class="svg-icon" viewBox="0 0 20 20" style="fill:#29b6f6;">
+                  <path d="M10,2.172c-4.324,0-7.828,3.504-7.828,7.828S5.676,17.828,10,17.828c4.324,0,7.828-3.504,7.828-7.828S14.324,2.172,10,2.172M10,17.004c-3.863,0-7.004-3.141-7.004-7.003S6.137,2.997,10,2.997c3.862,0,7.004,3.141,7.004,7.004S13.862,17.004,10,17.004M10,8.559c-0.795,0-1.442,0.646-1.442,1.442S9.205,11.443,10,11.443s1.441-0.647,1.441-1.443S10.795,8.559,10,8.559 M10,10.619c-0.34,0-0.618-0.278-0.618-0.618S9.66,9.382,10,9.382S10.618,9.661,10.618,10S10.34,10.619,10,10.619 M14.12,8.559c-0.795,0-1.442,0.646-1.442,1.442s0.647,1.443,1.442,1.443s1.442-0.647,1.442-1.443S14.915,8.559,14.12,8.559 M14.12,10.619c-0.34,0-0.618-0.278-0.618-0.618s0.278-0.618,0.618-0.618S14.738,9.661,14.738,10S14.46,10.619,14.12,10.619 M5.88,8.559c-0.795,0-1.442,0.646-1.442,1.442s0.646,1.443,1.442,1.443S7.322,10.796,7.322,10S6.675,8.559,5.88,8.559 M5.88,10.619c-0.34,0-0.618-0.278-0.618-0.618S5.54,9.382,5.88,9.382S6.498,9.661,6.498,10S6.22,10.619,5.88,10.619"></path>
+                </svg>
+              </div>
+              <div class="social-mediavalue"><span>55</span> <span>
+                Others 
+               </span>
+               </div>
+             
+             </div>
+            </div>
+             </div>
+             </div> 
+                    </div>
+                            </div>
+                          </div>  
+                        </div>
+                          </div>
+                      <div class="card">
+                          <div class="card-header" id="faqhead2">
+                              <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq2"
+                              aria-expanded="true" aria-controls="faq2">Respondent's Awareness on Fomeme Updates on Social Media
+                            </a>
+                          </div>
+  
+                          <div id="faq2" class="collapse" aria-labelledby="faqhead2" data-parent="#faq">
+                              <div class="card-body">
+                                <div class="row">
+            
+           
+                                  <div class="col-12 col-sm-6"> 
+                                    <div class="chard-card">
+                                      <div class="card">
+                                        <div class="card-header">Announcement on Business Operating Activities on Soical Media</div>
+                          
+                          <div class="card-body">
+                            <script>
+                            google.charts.load("current", {packages:["corechart"]});
+                            google.charts.setOnLoadCallback(drawChart);
+                            function drawChart() {
+                              var data = google.visualization.arrayToDataTable([
+                                ['Task', 'Hours per Day'],
+                                ['Yes',     11],
+                                ['No',      2] 
+                              ]);
+                          
+                              var options = {
+                                 pieHole: 0.4,
+                                'chartArea':{'width':'100%','height':'80%'},
+                                legend: { position: 'bottom'},
+                          
+                              };
+                          
+                              var chart = new google.visualization.PieChart(document.getElementById('donutchart3'));
+                              chart.draw(data, options);
+                            }
+                          </script>
+                           <div style="width: 100%;">
+                          <div id="donutchart3"></div>
+                          </div>
+                            </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-sm-6"> 
+                                    <div class="chard-card">
+                                      <div class="card">
+                                        <div class="card-header">Delivering health awarness on Social Media</div>
+                          
+                          <div class="card-body">
+                            <script>
+                            google.charts.load("current", {packages:["corechart"]});
+                            google.charts.setOnLoadCallback(drawChart);
+                            function drawChart() {
+                              var data = google.visualization.arrayToDataTable([
+                                ['Task', 'Hours per Day'],
+                                ['Yes',     11],
+                                ['No',      2] 
+                              ]);
+                          
+                              var options = {
+                                title: '',
+                                pieHole: 0.4,
+                                'chartArea':{'width':'100%','height':'80%'},
+                                legend: { position: 'bottom'},
+                          
+                              };
+                          
+                              var chart = new google.visualization.PieChart(document.getElementById('donutchart4'));
+                              chart.draw(data, options);
+                            }
+                          </script>
+                          <div style="width: 100%;">
+                          <div id="donutchart4"></div>
+                           </div>
+                            </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-12 col-sm-6"> 
+                                    <div class="chard-card">
+                                      <div class="card">
+                                        <div class="card-header">Providing reminder or any undates aligned with information from MOH.Immigration & MOHA on Social Media</div>
+                          <div class="card-body">
+                            <script>
+                            google.charts.load("current", {packages:["corechart"]});
+                            google.charts.setOnLoadCallback(drawChart);
+                            function drawChart() {
+                              var data = google.visualization.arrayToDataTable([
+                                ['Task', 'Hours per Day'],
+                                ['Yes',     11],
+                                ['No',      2] 
+                              ]);
+                          
+                              var options = {
+                                title: '',
+                                pieHole: 0.4,
+                                'chartArea':{'width':'100%','height':'80%'},
+                                legend: { position: 'bottom'},
+                          
+                              };
+                          
+                              var chart = new google.visualization.PieChart(document.getElementById('donutchart5'));
+                              chart.draw(data, options);
+                            }
+                          </script>
+                          <div style="width: 100%;">
+                          <div id="donutchart5"></div>
+                           </div>
+                            </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                   </div>
+                              </div>
+                          </div>
+                      </div>
+                   
+                      <div class="card">
+                          <div class="card-header" id="faqhead3">
+                              <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq3"
+                              aria-expanded="true" aria-controls="faq3">NIPS SCORE</a>
+                          </div>
+  
+                          <div id="faq3" class="collapse" aria-labelledby="faqhead3" data-parent="#faq">
+                              <div class="card-body">
+                                   <div class="row">
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                      <div class="chard-card">
+                                        <div class="card">
+                                          <div class="card-header">Registration Process:Web Portal</div>
+                            <div class="card-body">
+                              <div class="card-svg">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                            <g id="Capa_1">
+                              <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                              <g>
+                                <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                  c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                  c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                  c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                  c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                  C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                <g>
+                                  <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                    C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                  <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                    C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                  <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                    C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                  <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                    C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                  <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                    C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                  <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                    c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                </g>
+                              </g>
+                              <g>
+                                <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                              </g>
+                            </g>
+                            <g id="Capa_2">
+                              <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                c0,0,56.244,61.509,58.751,189.372"/>
+                              <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2</text>
+                              <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.9145 -0.3907 0.3929 0.9196 220.8779 54.4722)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                              <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">4</text>
+                              <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462">6</text>
+                              <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">8</text>
+                              <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">1</text>
+                              <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                              <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                              <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                            </g>
+                            </svg>
+                            <div class="svgresult">
+                            69 </div>
+                            </div>
+                             
+                              </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                      <div class="chard-card">
+                                        <div class="card">
+                                          <div class="card-header">Registration Porcess:Regional Offices</div>
+                                        <div class="card-body">
+                                          <div class="card-svg">
+                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                                        <g id="Capa_1">
+                                          <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                                          <g>
+                                            <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                              c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                              c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                              c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                              c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                              C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                            <g>
+                                              <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                                C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                              <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                                C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                              <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                                C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                              <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                                C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                              <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                                C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                              <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                                c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                            </g>
+                                          </g>
+                                          <g>
+                                            <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                            <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                            <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                                          </g>
+                                        </g>
+                                        <g id="Capa_2">
+                                          <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                            c0,0,56.244,61.509,58.751,189.372"/>
+                                          <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                                          <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2</text>
+                                          <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                                          <text transform="matrix(0.9145 -0.3907 0.3929 0.9196 220.8779 54.4722)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                                          <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">4</text>
+                                          <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                                          <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462">6</text>
+                                          <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                                          <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">8</text>
+                                          <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                                          <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">1</text>
+                                          <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                                          <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                                          <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                                        </g>
+                                        </svg>
+                                        <div class="svgresult">
+                            63             </div>
+                                        </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                      <div class="chard-card">
+                                        <div class="card">
+                                          <div class="card-header">Overall Average NPS</div>
+                            <div class="card-body">
+                              <div class="card-svg">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                            <g id="Capa_1">
+                              <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                              <g>
+                                <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                                  c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                                  c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                                  c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                                  c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                                  C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                                <g>
+                                  <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                                    C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                                  <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                                    C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                                  <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                                    C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                                  <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                                    C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                                  <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                                    C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                                  <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                                    c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                                </g>
+                              </g>
+                              <g>
+                                <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                                <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                                <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                              </g>
+                            </g>
+                            <g id="Capa_2">
+                              <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                                c0,0,56.244,61.509,58.751,189.372"/>
+                              <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2</text>
+                              <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.9145 -0.3907 0.3929 0.9196 220.8779 54.4722)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                              <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">4</text>
+                              <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462">6</text>
+                              <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">8</text>
+                              <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                              <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">1</text>
+                              <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                              <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                              <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                            </g>
+                            </svg>
+                            <div class="svgresult">
+                              61
+                             </div>
+                            </div>
+                             
+                              </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                     
+                              <div class="col-12 col-sm-6 col-md-4">
+                                <div class="chard-card">
+                                  <div class="card">
+                                    <div class="card-header">Medical Examination Services</div>
+                          <div class="card-body">
+                          <div class="card-svg">
+                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                          <g id="Capa_1">
+                          <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                          <g>
+                          <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                            c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                            c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                            c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                            c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                            C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                          <g>
+                            <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                              C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                            <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                              C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                            <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                              C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                            <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                              C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                            <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                              C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                            <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                              c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                          </g>
+                          </g>
+                          <g>
+                          <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                          <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                          <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                          </g>
+                          </g>
+                          <g id="Capa_2">
+                          <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                          c0,0,56.244,61.509,58.751,189.372"/>
+                          <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2</text>
+                          <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.9145 -0.3907 0.3929 0.9196 220.8779 54.4722)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                          <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">4</text>
+                          <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462">6</text>
+                          <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">8</text>
+                          <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">1</text>
+                          <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                          <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                          <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                          </g>
+                          </svg>
+                          <div class="svgresult">
+                          69
+                          </div>
+                          </div>
+                          
+                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-4">
+                                <div class="chard-card">
+                                  <div class="card">
+                                    <div class="card-header">Appeal Process</div>
+                          <div class="card-body">
+                          <div class="card-svg">
+                          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
+                          <g id="Capa_1">
+                          <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67 	"/>
+                          <g>
+                          <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
+                            c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
+                            c-28.393,49.07-44.65,106.039-44.65,166.808h118.948c0-39.101,10.508-75.726,28.776-107.298
+                            c18.844-32.567,45.981-59.705,78.548-78.548c31.573-18.269,68.197-28.777,107.299-28.777c39.1,0,75.725,10.508,107.298,28.777
+                            c32.566,18.844,59.704,45.981,78.548,78.548c18.269,31.572,28.776,68.197,28.776,107.298h118.948
+                            C695.545,304.687,679.287,247.718,650.895,198.648z"/>
+                          <g>
+                            <path fill="#FED137" d="M469.272,179.61l59.51-103.074c-49.07-28.392-106.038-44.65-166.808-44.65v118.948
+                              C401.074,150.833,437.699,161.341,469.272,179.61z"/>
+                            <path fill="#99C817" d="M254.676,179.61l-59.51-103.074c-50.619,29.288-92.824,71.494-122.112,122.112l103.074,59.51
+                              C194.971,225.591,222.109,198.454,254.676,179.61z"/>
+                            <path fill="#FED137" d="M361.975,150.833V31.885c-60.77,0-117.739,16.258-166.809,44.65l59.51,103.074
+                              C286.249,161.341,322.873,150.833,361.975,150.833z"/>
+                            <path fill="#D72626" d="M547.82,258.158l103.074-59.51c-29.288-50.619-71.493-92.825-122.112-122.112l-59.51,103.074
+                              C501.839,198.454,528.977,225.591,547.82,258.158z"/>
+                            <path fill="#D72626" d="M576.597,365.456L576.597,365.456h118.948l0,0c0-60.77-16.258-117.738-44.65-166.808l-103.074,59.51
+                              C566.089,289.73,576.597,326.355,576.597,365.456z"/>
+                            <path fill="#99C817" d="M147.351,365.456c0-39.101,10.508-75.726,28.776-107.298l-103.074-59.51
+                              c-28.393,49.07-44.65,106.039-44.65,166.808l0,0H147.351L147.351,365.456z"/>
+                          </g>
+                          </g>
+                          <g>
+                          <circle fill="#303030" cx="373.733" cy="344.095" r="40.831"/>
+                          <circle fill="#FFFFFF" cx="373.733" cy="344.095" r="29.015"/>
+                          <circle fill="#303030" cx="373.734" cy="344.095" r="20.361"/>
+                          </g>
+                          </g>
+                          <g id="Capa_2">
+                          <path fill="none" d="M19,361.908c0,0,0-292.596,311.397-337.769c0,0,205.215-22.586,311.397,151.945
+                          c0,0,56.244,61.509,58.751,189.372"/>
+                          <text transform="matrix(0.0694 -0.992 0.9976 0.0698 18.9912 358.0146)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.6317 -0.7681 0.7723 0.6352 94.8403 150.9619)" font-family="'MyriadPro-Regular'" font-size="28.7462">2</text>
+                          <text transform="matrix(0.6659 -0.7386 0.7427 0.6696 104.0024 139.8125)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.9145 -0.3907 0.3929 0.9196 220.8779 54.4722)" font-family="'MyriadPro-Regular'" font-size="28.7462"> </text>
+                          <text transform="matrix(0.9249 -0.3653 0.3674 0.9301 226.2969 52.0903)" font-family="'MyriadPro-Regular'" font-size="28.7462">4</text>
+                          <text transform="matrix(0.9381 -0.3301 0.3319 0.9433 239.7573 46.7725)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.9543 0.2799 -0.2815 0.9596 453.3379 36.4277)" font-family="'MyriadPro-Regular'" font-size="28.7462">6</text>
+                          <text transform="matrix(0.9421 0.3185 -0.3203 0.9473 467.2314 40.4976)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.6848 0.7212 -0.7252 0.6886 596.2383 117.6089)" font-family="'MyriadPro-Regular'" font-size="28.7462">8</text>
+                          <text transform="matrix(0.6497 0.7529 -0.7571 0.6533 606.1738 128.0664)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text> 
+                          <text transform="matrix(0.1316 0.9857 -0.9912 0.1323 696.043 311.1475)" font-family="'MyriadPro-Regular'" font-size="28.7462">1</text>
+                          <text transform="matrix(0.0957 0.9899 -0.9954 0.0962 697.9629 325.5103)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                          <text transform="matrix(0.061 0.9926 -0.9981 0.0614 699.3604 339.9707)" font-family="'MyriadPro-Regular'" font-size="28.7462">0</text>
+                          <path fill="none" stroke="#303030" stroke-miterlimit="10" d="M455,243"/>
+                          </g>
+                          </svg>
+                          <div class="svgresult">
+                          43
+                          </div>
+                          </div>
+                          
+                          </div>
+                                  </div>
+                                </div>
+                              </div>
+                                  </div>
+                             
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+    </div>
+ </div>
+ </div>
+</div>
+ 
+                </div>
+        </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css"> 
+ @import url('https://fonts.cdnfonts.com/css/fontawesome');
+
+.logo{
+    width: 150px;
+    float: left;
+}
+.logo>img{
+    width: 100%;
+}
+.header{
+    box-shadow: 1px 4px 4px #efefef;
+    border-bottom:solid 1px #e2e2e2 ;
+}
+.card-filter {
+    width: 20px;
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: solid 1px #c2c2c2;
+    border-radius: 50px;
+    padding: 0px 4px;
+    background: #bf1f3e;
+    color: #fff;
+    font-size: 13px;
+    height: 20px;
+}
+.filter-body {
+    float: left;
+    width: 100%;
+}
+.month-filter>.form-group>.input-group>select {
+    font-size: 13px;
+}
+.month-filter>.input-daterange>.form-control {
+    font-size: 13px;
+}
+.chard-box {
+    float:left;
+    width: 100%;
+}
+.filter-btn{
+    width: 100%;
+    float: left;
+    text-align: center; padding: 0px 10px;
+    margin-top: 10px;
+}
+.filter-btn>.btn-clear,.filter-btn>.btn-apply{
+    border-radius: 6px;
+    border: solid 1px #c2c2c2;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 0px 5px;
+}
+.filter-btn>.btn-apply {
+    background: #76add0;
+    color: #fff;
+}
+
+.lab_widget {
+     width: 100%;
+    float: left;
+        margin: 8px 0px;
+}
+ul.li_list{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+ul.li_list>li { 
+    width: 20%;
+    display: inline-block;
+}
+.li_list>li>.card {
+    padding: 6px;
+    height: 77px;
+    margin: 5px;
+        background: #c5e6fb42;
+          box-shadow: 0px 3px 3px -1px rgba(10,22,70,.1), 0px 0px 1px 0px rgba(10,22,70,.06) !important;
+ }
+
+.li_list>li>.card>.card-body {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.li_list>li>.card>.card-body>p {
+    margin-bottom: 0px;
+    font-size: 11px;
+    line-height: 16px;
+    order: 2;
+    text-align: center;
+    color: #0e7dc1;
+    font-weight: 500;
+    height: 19px;
+}
+.li_list>li>.card>.card-body>span {
+    color: #05a3f4;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+    float: left;
+    font-weight: bold;
+    line-height: 45px;
+    order: 1;
+
+}
+.chard-card {
+    margin-bottom: 15px;
+}
+.chard-card>.card{
+    height: 100%;
+}
+.chard-card>.card>.card-header {
+    background: #c5deee;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 500;
+    color: #0e7dc1;
+    padding: 8px;
+    text-align: center;
+}
+.chard-card>.card>.card-header>i{
+    color:#bf1f3e;
+    display: none;
+}
+.dashboard-body{
+    background: #F5F9FC;
+}
+.dashboard-chart {
+    float: left;
+    width: 100%;
+ 
+} 
+.dashboard_content {
+    float: right;
+     
+}
+.filter {
+    margin-bottom:14px;
+    width: 100%;
+    float: left;
+}
+.filter_div {
+    width: 100%;
+    float: left;
+    background: #e9f5fc;
+    margin: 11px 2px;
+    
+}
+.filter-title {
+    font-size: 15px;
+    padding: 0px 10px;
+    line-height: 30px;
+     background: #c5deee;
+}
+/* ul.list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+ul.list>li {
+    border-bottom: dotted 1px #c2c2c2;
+    padding: 8px;
+    font-size: 13px;}
+ul.list>li:last-child{
+    border-bottom: none;
+}
+ul.list>li:hover {
+    background: #f6f6f6;
+}
+ul.list>li:after{
+    font-family: FontAwesome;
+      content: "\f105";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    float: right;
+    color: #bf1f3e;
+}
+ */
+ 
+.filter-title>i {
+    float: right;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #0e7dc1;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    background: #F5F9FC;
+}
+
+#sidebar {
+    min-width: 220px;
+    max-width: 220px;
+    transition: all 0.3s;
+    padding:0px 20px 20px 20px;
+}
+
+#sidebar.active {
+    margin-left: -220px;
+}
+  
+
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -220px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+.pagetitle {
+    font-size: 20px;
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #0e7dc1;
+    background: #c5deee;
+    padding: 8px 24px 8px 24px;
+    border-bottom: solid 1px #e3dcdc;
+}
+.pagetitle>i {
+    background: #bf1f3e;
+      padding: 1px;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    color: #fff;
+    line-height: 18px;
+}
+.filter-link:after {
+    content: "\f107";
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    float: right;
+  }
+   
+  .filter-link:after {
+    content: "\f105";
+    color:#bf1f3e;
+  }  
+  .filter-link{
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #222;
+      padding: 5px 10px; 
+      width: 100%;
+      float: left;
+                          }
+   
+  .filtereaccordion>.card>.card-header{
+      padding: 0px;
+      border-bottom: dotted 1px #c2c2c2;
+    background: #e9f5fc;
+  border-radius: 0px;
+  padding: 0.2rem 0.2rem;
+  }
+  .filtereaccordion>.card {
+      border-radius: 0px;
+      border: none;
+  }
+  .filtereaccordion>.card{
+      border-radius: 0px;
+  }
+  .filtereaccordion>.card>.card-header:hover{
+      background: #f6f6f6;
+  }
+  .filtereaccordion>.card>.card-header>a{
+      font-size: 13px;
+  }
+  .filtereaccordion>.card>.card-header>a:hover{
+    font-size: 13px;
+    text-decoration: none;
+}
+  .filtereaccordion>.card>.show>.card-body{
+      padding:0px
+  }
+  .subment-li{
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+  }
+  .subment-li>li{
+      padding: 10px;
+      margin: 0px;
+      font-size: 13px;
+      
+      border-bottom: dotted 1px #c2c2c2;
+  }
+     .input-group-text{
+            border-radius: 3px 0px 0px 3px!important;
+    background: #fff!important;
+     }
+  .subment-li>li>i{
+    margin: 0px 5px;
+  }
+  
+  .subment-li>li:last-child{
+      border-bottom: none;
+  }
+     .year-month {
+    float: right;
+    width: 44%;
+    position: absolute;
+    z-index: 1111;
+    right: 0;
+  }
+  .year-month > span {
+      font-size: 10px;
+      float: left;
+      width: 75px;
+      text-align: center;
+      margin: 0px 4px;
+  }
+  .year-month>span>b {
+      width: 100%;
+      border: solid 2px #c5deee;
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-top: 3px;
+      background: #c5deee;
+      float: left;
+      color: #207ec1;
+  }
+  .tags {
+    width: 100%;
+    float: left;
+    background: #ddd;
+    border:solid 1px #dcdcdc;
+    padding: 7px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+.tags>span {
+  background: #489cd0e6;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 4px 10px;
+    margin: 0px 2px;
+    border-radius: 11px;
+    float: left;
+}
+
+ 
+  #main #faq .card .card-header .btn-header-link:after {
+    content: "\f107";
+    font-family: FontAwesome;
+        font-weight: 900;
+    float: right;
+  }
+   
+  #main #faq .card .card-header .btn-header-link.collapsed:after {
+    content: "\f106";
+    background: #bf1f3e;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50px;
+    line-height: 27px;
+}
+.card-svg{
+    width: 100%;
+    height: 100%;
+  }
+  .svgresult {
+    width: 100%;
+    float: left;
+    color: #000;
+    text-align: center;
+}
+.div-socialmedia {
+    width: 100%;
+    float: left;
+}
+ 
+.card-subtitle>.card>.card-header {
+    background: #dcdcdc;
+    font-weight: 500;
+    color: #795548;
+}
+.socialmedia-card>.chard-card>.card>.card-body{
+  padding: 5px;
+}
+.social-mediaicon {
+    width: 30%;
+    float: left;
+    font-size: 35px;
+}
+.social-mediavalue{
+  width: 70%;
+  float: right;
+  padding-top: 10px;
+}
+.social-mediaicon>svg{
+    width:40px;
+    height: 40px;
+  }
+.social-mediavalue>span{
+    width: 100%;
+    float: left;
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+.social-mediavalue>span:last-child{
+ width: 100%;
+  float: left; 
+   font-weight: normal;
+   font-size: 14px;
+
+}
+.accordion>.card>.card-header {
+    background: #c5deee;
+    padding: 4px;
+}
+.accordion>.card>.card-header>a {
+    color: #0e7dc1;
+    width: 100%;
+    text-align: left;
+}
+.accordion>.card {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.accordion>.card{
+  border-radius: 0.25rem!important;
+}
+.accordion>.card>.card-header>a{
+  color: #0e7dc1;
+}
+.social-mediaicon {
+    width: 30%;
+    float: left;
+    font-size: 38px;
+    text-align: center;
+}
+.card-subtitle>.card>.card-header {
+    background: #c5deee;
+    font-weight: 500;
+    color: #0e7dc1;
+}
+.svg-fullwidth{
+    width:100%;
+    height:100%;
+    background:#c5deee;
+}
+.svg-fullwidth>svg{
+    width:100%;
+    height:100%
+}
+.model-popup {
+cursor: pointer;
+}
+.model-btntable {
+position: absolute;
+top: 0;
+right: 0;
+font-size: 13px;
+margin: 4px 5px;
+background: #c5deee;
+color: #bf1f3e;
+padding: 0.275rem 0.55rem;
+}
+.chard-card>.card>.card-header{
+text-align: left!important;
+}
+.form-group>label{
+font-size: 12px;
+}
+.form-group {
+    padding: 5px;
+    margin: 0px;
+    MARGIN-BOTTOM: 0!important;
+}
+.form-control{
+    font-size: 12PX!important;
+}
+.table-data>thead>tr>th {
+font-size: 12px;
+background-color: #ececec;
+padding: 0px 10px;
+line-height: 30px;
+}
+
+.table-data>tbody>tr>td {
+font-size: 13px;
+line-height: 17px;
+}
+.table-data>tbody>tr:nth-child(odd) {background-color: #e9f7ff;}
+.sub-tabs>.nav-item>.active{
+background: #c5deee;
+color: #0e7dc1;
+}
+.sub-tabs>.nav-item>.nav-link{
+border: solid 1px #dedede;
+font-size: 14px;
+}
+.modal-popuptite {
+font-size: 17px;
+color: #bf1f3e;
+}
+.thselect {
+padding: 0px 0px 0px 0px;
+font-size: 13px;
+font-weight: 500;
+background: transparent;
+border: 0;
+margin-top: 0px;
+}
+.div_month{    float: right;
+    width: auto;
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+ 
+    }
+    .div_month>li {
+        display: inline-block;
+        margin: 0px 10px;
+    }
+    .instagram{ 
+        color: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);}
+        .svg-filter {
+                width: 230px;
+                right: 0;
+                position: absolute;
+                margin: 0px 15px;
+                padding: 10px;
+                background-color: #e3e3e3a3;
+                height: 100%;
+                border: solid 1px #c2c2c2;
+            }
+          .svg-filter>ul{
+            list-style: none;
+          padding: 0px;
+          margin: 0px;
+          
+          }
+          
+          .svg-filter>ul>li{
+            list-style: none;
+          }
+           
+          .div_state>ul{
+            padding: 0px;
+            margin: 0px;
+          
+          }
+          .div_state>ul>li{  list-style: none;
+            font-size: 13px;
+            float: left;
+            background: #efefef;
+            width: 100%;
+            border-bottom: dotted 1px #c2c2c2;
+            margin-bottom: 2px;
+            padding: 7px 10px;
+          }
+          .div_state>ul>li::after {
+            content: "\f105";
+    font-family: FontAwesome;
+    font-weight: 900;
+    float: left;
+    position: absolute;
+    margin-top: 0px;
+    color: #bf1f3e;
+    left: 10px;
+
+        }
+          
+          .div_state>ul>li:last-child{
+            margin-bottom: 0px;
+            border: none;
+          }
+           .div_state>ul>li>div:first-child{
+            width: 70%;
+            float: left;
+            padding: 0px 12px;
+        }
+          .div_state>ul>li>div:last-child {
+            font-weight: 800;
+            width: 30%;
+            float: left;
+        }
+          .div_state {
+              position: absolute;
+              width: 290px;
+              left: 50%;
+              top: 40px;
+              background: #fff;
+              border: solid 1px #c2c2c2;
+              border-radius: 10px;
+          }
+           
+          .div_state> h1 {
+              padding: 6px;
+              font-size: 18px;
+              background: #0e7dc1;
+              color: #fff;
+              margin: 0;
+              border-radius: 5px 5px 0px 0px;
+          }
+          .div_state>h3 {
+              font-size: 15px;
+              background-color: #bf1f3e;
+              color: #e3e3e3;
+           margin-bottom: 0px;
+              padding: 4px;
+          }
+          .select-month{
+            float: right;
+
+          }
+          .select-month>.dropdown>.dropdown-toggle{padding: 2px 8px;
+            font-size: 14px;
+          }
+          .select-month>.dropdown>.dropdown-menu{
+            padding: 0;
+            font-size: 13px;
+            text-align: left;
+        }
+        .select-month>.dropdown>.dropdown-menu>.list-year{
+            line-height: 21px;
+            border-bottom: dotted 1px #c2c2c2;
+            padding: 6px 10px;
+        }
+        .select-month>.dropdown>.dropdown-menu>.list-year:last-child{
+            border-bottom: none;
+        }
+        
+        .sidefilter {
+            font-size: 15px!important;
+            margin: 0px!important;
+            padding: 0px!important
+        }
+        .sidefilter>.dropdown-item{
+            font-size: 13px!important;
+            border-bottom: dotted 1px #c2c2c2;
+        }
+    @media only screen and (max-width:1024px) and (min-width:767px)  {
+
+        ul.li_list>li {
+            width: 30%;
+            display: inline-block;
+        }
+        .social-mediavalue {
+            width: 100%;
+            float: right;
+        }
+        .social-mediaicon {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    @media only screen and (max-width:1024px) and (min-width:768px)  {
+        
+        .div_state {
+            position: absolute;
+            width: 96%;
+            left: 11px;
+            top: 100px;
+            background: #fff;
+            border: solid 1px #c2c2c2;
+            border-radius: 10px;
+        }
+        .svg-filter>ul>li {
+            list-style: none;
+            width: 50%;
+            float: left;
+        }
+        .svg-filter>ul>li:last-child{
+            width: 100%;
+            text-align: right;
+        }
+        .svg-filter>ul>li:last-child>.filter-btn{
+            text-align: right;
+        }
+        .svg-fullwidth{
+            margin-top: 70px;
+        }
+        .svg-fullwidth>svg {
+            width: 100%;
+            height: 100%;
+        }
+        .svg-filter{width: 100%; margin: 0px; padding: 0px; height: auto;}
+        .svg-filter>ul>li>label{
+            display: none;
+        }
+    }
+    @media only screen and (max-width:767px) and (min-width:320px)  {
+         
+.div_state {
+    position: absolute;
+    width: 94%;
+    left: 10px;
+    top: 430px;
+    background: #fff;
+    border: solid 1px #c2c2c2;
+    border-radius: 10px;
+}
+        .svg-filter>ul>li {
+            list-style: none;
+            width: 50%;
+            float: left;
+        }
+        .svg-filter>ul>li:last-child{
+            width: 100%;
+            text-align: right;
+        }
+        .svg-filter>ul>li:last-child>.filter-btn{
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        /* .svg-fullwidth{
+            margin-top: 70px;
+        } */
+        .svg-fullwidth>svg {
+            width: 100%;
+            height: 100%;
+        }
+        .svg-filter{width: 100%; margin: 0px; padding: 0px; height: auto;}
+        .svg-filter>ul>li>label{
+            display: none;
+        }
+    }
+    @media only screen and (max-width:767px) and (min-width:500px)  {
+        ul.li_list>li {
+            width: 50%;
+            display: inline-block;
+        }
+        .div_month{
+            margin-top: 10px;
+        }    
+        .div_month>li {
+            margin: 0px;
+            list-style: none;
+            float: left;
+            width: 50%;
+            line-height: 0;
+        }
+        .social-mediavalue {
+            width: 100%;
+            float: right;
+        }
+        .social-mediaicon {
+         width: 100%;   text-align: center;
+        }
+        .social-mediavalue {
+            width: 100%;
+            float: right;
+        }
+        .social-mediaicon {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    @media only screen and (max-width:499px) and (min-width:320px)  {
+        ul.li_list>li {
+            width:50%;
+            display: inline-block;
+        }    
+        .li_list>li>.card {
+            padding: 6px;
+            height: 92px;}
+        .year-month {
+            float: right;
+            width: 90%;
+            position: absolute;
+            z-index: 1111;
+            right: 0;
+        }
+        .div_month{
+            width: 100%;
+            float: left;
+        }
+        .div_month>li {
+            margin: 0px;
+            list-style: none;
+            line-height: 0;
+            width: 100%;
+        }
+        .div_month{
+            margin-top: 10px;
+        }    
+        .social-mediavalue {
+            width: 100%;
+            float: right;
+        }
+        .social-mediaicon {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    </style>
