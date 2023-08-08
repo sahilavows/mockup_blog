@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   namespace :dashboards do
     get 'dashboard2/dashboard_2'
+    get 'dashboard2/dashboard_2_option_2' 
     get 'dashboard1/dashboard_1'
     get 'dashboard3/dashboard_3'
     get 'dashboard4/dashboard_4'
     get 'dashboard5/dashboard_5'
+
   end
   get '/dashboard_2',to:'dashboard_2#index'
   get 'dashboard/dashboard_1'
