@@ -4,13 +4,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.7.7"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+
 gem "rails"
+gem "chartkick"
 #for ajax request
 gem 'jquery-rails'
 gem 'pdfkit'
 # for debugging 
 gem 'byebug'
-
+gem 'leaflet-rails'
 # group of gem to generate excel sheet report
 gem 'rubyzip', '>= 1.2.1'
 gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
