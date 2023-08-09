@@ -54,21 +54,22 @@ class DashboardController < ApplicationController
                                       ["block_fw", @registration.with_block_fw, "block_fw"],
                                       ["appeal", @registration.with_appeal, "color: #e5e4e2"]
                                     ]
-      @bottom_line_chart_data = [
-                                    ['Month', 'Year 2019', 'Month'],
-                                    ['January', 7, 5.5],
-                                    [' February ', 8, 8.5],
-                                    ['March ', 7, 7.5],
-                                    ['April ', 6, 5],
-                                    ['May ', 8, 7],
-                                    ['June ', 8, 7.5],
-                                    ['July ', 7, 7.5],
-                                    [' August ', 6, 6],
-                                    ['September ', 8, 7.6],
-                                    ['October ', 9, 8],
-                                    ['November ', 9, 8.5],
-                                    ['December', 10, 9.5]
-                                  ]                      
+      @bottom_line_chart_data = bar_graph 
+      # @bottom_line_chart_data = [
+      #                              ['Month', 'Year 2019', 'Month'],
+      #                              ['January', 7, 5.5],
+      #                              [' February ', 8, 8.5],
+      #                              ['March ', 7, 7.5],
+      #                              ['April ', 6, 5],
+      #                              ['May ', 8, 7],
+      #                              ['June ', 8, 7.5],
+      #                              ['July ', 7, 7.5],
+      #                              [' August ', 6, 6],
+      #                              ['September ', 8, 7.6],
+      #                              ['October ', 9, 8],
+      #                              ['November ', 9, 8.5],
+      #                              ['December', 10, 9.5]
+      #                            ]                                               
     end
 
     def generate_pdf_1
@@ -98,5 +99,19 @@ class DashboardController < ApplicationController
         driver.quit if driver
       end
       pdf 
+  end 
+
+  def bar_graph
+    year =  params[:data][:timePeriod][:year] rescue nil
+    year = year.nil? ? Time.new.year.to_s : year
+    @data = [['Month', "#{year}","Month"]]
+    
+    records = Registration.where(created_at: "#{year}-01-01".."#{year}-12-31")
+
+    (1..12).each do |month|
+      count = records.where("EXTRACT(MONTH FROM created_at) = ?", month).count
+      @data << [Date::MONTHNAMES[month], count,count-0.1]
+    end
+    @data
   end 
 end

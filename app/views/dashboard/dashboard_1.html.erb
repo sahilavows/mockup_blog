@@ -62,9 +62,14 @@
        }
     }
 
-    const interval = 1000; // 1 second in milliseconds
-    const ajaxInterval = setInterval(filter_ajax(true), interval);
-    
+    function generate_pdf_file(){
+     $.ajax({
+        type: "Get", 
+        url: "/generate_pdf.pdf",
+        data: {data: getValues()}
+      })   
+    }    
+
     function extract_data(val){
        var data = Array.from($("#"+val+" input[type=checkbox]"));
        data = data.filter(x => x.checked).map(x => x.value);
