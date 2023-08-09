@@ -83,6 +83,22 @@
         data: {data: getValues()}
       })   
     }
+
+    function excel_data(){             
+        var serializedObject = JSON.stringify(getValues());
+        var encodedObject = encodeURIComponent(serializedObject);
+        
+        var link = document.getElementById('excel_gen');
+        link.href = '/generate_excel?data=' + encodedObject;
+    }
+ 
+    function pdf_data(){             
+        var serializedObject = JSON.stringify(getValues());
+        var encodedObject = encodeURIComponent(serializedObject);
+        
+        var link = document.getElementById('pdf_gen');
+        link.href = '/generate_pdf?data=' + encodedObject;
+    }
  
     function getValues() {
     var values = {};

@@ -41,7 +41,7 @@ class Registration < ApplicationRecord
   end
 
   def self.filter_registrations(params)
-	  query = all
+    query = all
 
 	  return query if params.blank?
 

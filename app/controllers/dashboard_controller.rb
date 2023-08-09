@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-  before_action :data_creation
+  before_action :data_creation,only: [:dashboard_1]
 
   def dashboard_1
     # @registration = Registration.filter_registrations(params[:data])
@@ -15,18 +15,23 @@ class DashboardController < ApplicationController
   end 
 
   def generate_excel
-     @data = Report.all # Fetch data from your model
+    params[:data] = JSON.parse(params["data"])
+    data_creation
+     # @data = Report.all # Fetch data from your model
+     @data = @registration
      respond_to do |format|
         format.xlsx
       end
   end 
 
   private
-    def data_creation 
+    def data_creation
       c = ISO3166::Country.find_country_by_iso_short_name('malaysia')
       @states = c.states.map{|i| i[1].name}
       @countries = ISO3166::Country.all_translated
-      @registration = Registration.filter_registrations(params[:data])
+      data = params[:data]
+      data = eval(params["pdf_data"].gsub('=>', ':')) if params["pdf_data"].present?
+      @registration = Registration.filter_registrations(data)
       @yearly_data = @registration.group_by_year
       @right_chart_data = [
                                       ["Element", "Density", {
@@ -73,6 +78,7 @@ class DashboardController < ApplicationController
     end
 
     def generate_pdf_1
+      query_string = URI.encode_www_form(pdf_data: JSON.parse(params["data"])) rescue ""
       # Initialize a headless browser (you can use other drivers like Chrome, Firefox, etc. as well)
       options = Selenium::WebDriver::Chrome::Options.new
       options.add_argument('--headless')
@@ -80,7 +86,7 @@ class DashboardController < ApplicationController
 
       begin
         # Load the web page
-        driver.navigate.to 'http://localhost:3000/dashboard/dashboard_1' # Replace with the URL you want to generate PDF for
+        driver.navigate.to "http://localhost:3000/dashboard/dashboard_1?#{query_string}" # Replace with the URL you want to generate PDF for
 
         # Wait for the page to load (you can adjust the wait time if needed)
         wait = Selenium::WebDriver::Wait.new(timeout: 10)
