@@ -14,6 +14,9 @@ class Registration < ApplicationRecord
 
 
   def self.generate_fake_data
+    c = ISO3166::Country.find_country_by_iso_short_name('malaysia')
+    @states = c.states.map{|i| i[1].name}
+    @countries = ISO3166::Country.all_translated 
     registration = Registration.new(
       medical_examination: Faker::Boolean.boolean,
       certification: Faker::Boolean.boolean,
@@ -26,8 +29,8 @@ class Registration < ApplicationRecord
       appeal: Faker::Boolean.boolean,
       Time_period: Faker::Date.between(from: '2019-01-01', to: '2023-12-31').strftime("%B %Y"), # Fake time period
       sector: ['Agriculture sector','Services sector'].shuffle.first, # Fake sector
-      state: ['1 State','2 State'].shuffle.first, # Fake state
-      country: ['Indonesia','India'].shuffle.first, # Fake country
+      state: @states.shuffle.first, # Fake state
+      country: @countries.shuffle!.first, # Fake country
       age: ['18 to 29','30 to 45','50 to >'].shuffle.first, # Fake age range
       gender: Faker::Gender.binary_type, # Fake gender
       registration_at: ['Web Portal','Agency','Regional Office'].shuffle.first, # Fake registration location
@@ -46,7 +49,16 @@ class Registration < ApplicationRecord
 	  if params[:timePeriod].present?
 	    month = params[:timePeriod][:month]
 	    year = params[:timePeriod][:year]
-	    # query = query.where("EXTRACT(MONTH FROM time_period) = ? AND EXTRACT(YEAR FROM time_period) = ?", Date::MONTHNAMES.index(month), year)
+      if month != "Select Monthly" && year != "Select Year"
+        month_number = Date::MONTHNAMES.index(month)       
+        query = query.where(created_at: Time.new(year, month_number).beginning_of_month..Time.new(year, month_number).end_of_month)
+      elsif  month == "Select Monthly" && year != "Select Year"
+        query = query.where(created_at: Time.new(year).beginning_of_year..Time.new(year).end_of_year)
+      elsif  month != "Select Monthly" && year == "Select Year"
+        current_year = Time.now.year
+        month_number = Date::MONTHNAMES.index(month)       
+        query = query.where(created_at: Time.new(current_year,month_number).beginning_of_month..Time.new(current_year,month_number).end_of_month) 
+      end 
 	  end
 
 	  # Apply other filters only when the corresponding params are present

@@ -61,6 +61,9 @@
       })
        }
     }
+
+    const interval = 1000; // 1 second in milliseconds
+    const ajaxInterval = setInterval(filter_ajax(true), interval);
     
     function extract_data(val){
        var data = Array.from($("#"+val+" input[type=checkbox]"));
@@ -91,17 +94,20 @@
     }
 
     // Get State value
-    var selectedState = document.querySelector('#State input[name="state"]:checked');
-    if (selectedState) {
-      values["state"] = selectedState.value;
+    var selectedState = document.querySelectorAll('#State input[name="state"]:checked');
+    const selectedStateVal = Array.from(selectedState).map(checkbox => checkbox.value);
+    if (selectedStateVal) {
+      values["state"] = selectedStateVal;
     }
 
     // Get Country value
-    var selectedCountry = document.querySelector('#Country input[name="country"]:checked');
+    // var selectedCountry = document.querySelector('#Country input[name="country"]:checked');
+    const selectedCountryCheckboxes = document.querySelectorAll('#Country input[name="country"]:checked');
+    const selectedCountry = Array.from(selectedCountryCheckboxes).map(checkbox => checkbox.value);
     if (selectedCountry) {
-      values["country"] = selectedCountry.value;
+      values["country"] = selectedCountry;
     }
-
+    
     // Get Age value
     var selectedAge = document.querySelector('#age input[name="age"]:checked');
     if (selectedAge) {

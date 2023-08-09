@@ -23,6 +23,9 @@ class DashboardController < ApplicationController
 
   private
     def data_creation 
+      c = ISO3166::Country.find_country_by_iso_short_name('malaysia')
+      @states = c.states.map{|i| i[1].name}
+      @countries = ISO3166::Country.all_translated
       @registration = Registration.filter_registrations(params[:data])
       @yearly_data = @registration.group_by_year
       @right_chart_data = [

@@ -24,3 +24,6 @@ end
   )
 end
 Report.all.each {|i| i.update(purchased_insurence: [true,false].shuffle.first)}
+100.times do 
+  Registration.generate_fake_data
+end 
