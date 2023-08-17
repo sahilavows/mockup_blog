@@ -867,7 +867,7 @@
                                             <div class="card-svg">
                                               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
                                                 <g id="Capa_1">
-                                                  <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67  " />
+                                                  <polygon id= "res_of_med_exam_ease_obtain" fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67  " />
                                                   <g>
                                                     <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
                                       c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
@@ -928,7 +928,7 @@
                                             <div class="card-svg">
                                               <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
                                                 <g id="Capa_1">
-                                                  <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67  " />
+                                                  <polygon id="overall_sat_to_fomema_exam" fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67  " />
                                                   <g>
                                                     <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
                                       c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
@@ -1403,7 +1403,7 @@
                                         <div class="card-svg">
                                           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
                                             <g id="Capa_1">
-                                              <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67  " />
+                                              <polygon id = "registration_process_web_portal" fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67  " />
                                               <g>
                                                 <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
                                   c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
@@ -1527,7 +1527,7 @@
                                         <div class="card-svg">
                                           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 722 402.592" enable-background="new 0 0 722 402.592" xml:space="preserve">
                                             <g id="Capa_1">
-                                              <polygon fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67  " />
+                                              <polygon id = "overall_average_nps" fill="#303030" points="373.73,315.08 373.73,373.11 148,337.67  " />
                                               <g>
                                                 <path fill="#FFFFFF" d="M650.895,198.648c-29.288-50.619-71.493-92.825-122.112-122.112
                                   c-49.07-28.392-106.038-44.65-166.808-44.65c-60.77,0-117.739,16.258-166.809,44.65c-50.619,29.288-92.824,71.494-122.112,122.112
@@ -2681,7 +2681,6 @@ ul.list>li:after{
       console.error("Polygon element not found with the provided ID.");
       return;
     }
-
     const centerX = 373.733; // Adjust to the actual center X-coordinate
     const centerY = 344.095; // Adjust to the actual center Y-coordinate
     const pointsArray = polygon.getAttribute("points").split(" ");
@@ -2693,11 +2692,13 @@ ul.list>li:after{
       return `${newX},${newY}`;
     });
     polygon.setAttribute("points", newPoints.join(" "));
+    undefined
   }
 
-  updatePolygonRotation("overall_sat_lev", 45);
-  updatePolygonRotation("sat_lev_emp_registration", 45);
-  updatePolygonRotation("sat_lev_panel_clinic", 45);
-  updatePolygonRotation("sat_lev_to_worker_reg", 45);
-  updatePolygonRotation("proc_of_med_exam_understandable", 45); 
 </script>
+
+<% @speed_meter.each do |key, value| %>
+  <script type="text/javascript">
+    updatePolygonRotation("<%= key %>", <%= value*36 %>);
+  </script>
+<% end %>
