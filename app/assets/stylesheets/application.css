@@ -14,3 +14,7 @@
  *= require_self
  */
 = require leaflet
+/* app/assets/stylesheets/application.css */
+*= require css/bootstrap.min
+*= require css/stylenew
+/* ... other requires ... */

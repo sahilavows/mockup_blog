@@ -1,0 +1,34 @@
+
+    <h1>
+        <%= @state_name["name"]%>
+      </h1>
+      <h3>
+        Abi
+      </h3>
+      <ul>
+        <li><%#debugger%>
+          <div> Number of Doctors </div>
+          <div> <%= @state_data[:doctors_no]%> </div>
+
+        </li>
+        <li>
+         <div> Number of X-ray </div>
+         <div>  <%= @state_data[:x_ray_count]%> </div>
+        </li>
+        <li>
+          <div> Number of Lab </div>
+          <div>  <%= @state_data[:lab_count]%> </div>
+        </li>
+        <li>
+          <div> Number of Employer </div>
+          <div>  <%= @state_data[:employer_count]%> </div>
+        </li>
+        <li>
+          <div> Number of FW  </div>
+          <div>  <%= @state_data[:fw_count]%> </div>
+        </li>
+        <li>
+          <div> Number of Detectable Disease/Condition</div>
+          <div>  <%= @state_data[:desease_detected_count]%> </div>
+        </li>
+    </ul>

@@ -12,3 +12,29 @@ wb.add_worksheet(name: 'YourModel Data') do |sheet|
     sheet.add_row [record.medical_examination,record.certification,record.result_released,record.xray_film_pending_review,record.xray_film_recived_by_xqcc,record.xray_film_reviwed,record.result_transmitted_to_immigration,record.block_fw,record.appeal,record.Time_period,record.sector,record.state,record.country,record.age,record.gender,record.registration_at,record.foregin_worker_type,]
   end
 end
+
+#second sheet 
+
+wb.add_worksheet(name: 'second sheet') do |sheet|
+  # Add headers
+  sheet.add_row ["MEDICAL_EXAMINATION", "CERTIFICATION", "RESULT_RELEASED", "XRAY_FILM_PENDING_REVIEW", "XRAY_FILM_RECIVED_BY_XQCC", "XRAY_FILM_REVIWED", "RESULT_TRANSMITTED_TO_IMMIGRATION", "BLOCK_FW", "APPEAL", "TIME_PERIOD", "SECTOR", "STATE", "COUNTRY", "AGE", "GENDER", "REGISTRATION_AT", "FOREGIN_WORKER_TYPE"] 
+
+
+  # Add data
+   @registration.each do |record|
+    sheet.add_row [record.medical_examination,record.certification,record.result_released,record.xray_film_pending_review,record.xray_film_recived_by_xqcc,record.xray_film_reviwed,record.result_transmitted_to_immigration,record.block_fw,record.appeal,record.Time_period,record.sector,record.state,record.country,record.age,record.gender,record.registration_at,record.foregin_worker_type,]
+  end
+end
+
+#third sheet 
+
+wb.add_worksheet(name: 'third sheet') do |sheet|
+  # Add headers
+  sheet.add_row ["MEDICAL_EXAMINATION", "CERTIFICATION", "RESULT_RELEASED", "XRAY_FILM_PENDING_REVIEW", "XRAY_FILM_RECIVED_BY_XQCC", "XRAY_FILM_REVIWED", "RESULT_TRANSMITTED_TO_IMMIGRATION", "BLOCK_FW", "APPEAL", "TIME_PERIOD", "SECTOR", "STATE", "COUNTRY", "AGE", "GENDER", "REGISTRATION_AT", "FOREGIN_WORKER_TYPE"] 
+
+
+  # Add data
+   @registration.each do |record|
+    sheet.add_row [record.medical_examination,record.certification,record.result_released,record.xray_film_pending_review,record.xray_film_recived_by_xqcc,record.xray_film_reviwed,record.result_transmitted_to_immigration,record.block_fw,record.appeal,record.Time_period,record.sector,record.state,record.country,record.age,record.gender,record.registration_at,record.foregin_worker_type,]
+  end
+end

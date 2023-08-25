@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fomema Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/stylenew.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/daterangepicker.css" />
+<script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/js/moment.min.js"></script>
+<script type="text/javascript" src="/assets/js/daterangepicker.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+</head>
+<body class="noscrolbar">
+    <div class="header">
+        <nav class="navbar navbar-expand-md bg-light navbar-dark">
+            <div class="admin-logo"> <img src="img/logo.png"></div> 
+
+            <!-- Topbar Search -->
+            <div class="nav-title">
+                <span>Dashboard 
+                </span>
+                <h1>Foreign Workers Information</h1>
+            </div>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="filter-content mx-0 px-0">
+                    
+                        <div class="filter-li"  ><span id="sidebarCollapse"> <b><i class="fa fa-filter"></i></b>  &nbsp;Filter By
+                    </span> 
+                    
+                      <style>
+                        .dropdown-toggle::after{
+                                border-right: 0.3em solid transparent!important; 
+     border-bottom: 0!important;
+
+                        }
+                      </style>
+                </div></div>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <div class="filter-content mx-0 px-0 no-arrow" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="filter-li">
+                    <span> <b><i class="fa fa-download" aria-hidden="true"></i></b>  &nbsp;Export</span> 
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in m-0 p-0" aria-labelledby="userDropdown">
+                        <ul class="li-profile">
+                          <li style="border-bottom: dotted 1px #c2c2c2; font-size: 12px;"><a class="dropdown-item"> <i class="fa fa-file-excel-o"></i>Pdf </a></li>
+                          <li style="border-bottom: dotted 1px #c2c2c2; font-size: 12px;"><a class="dropdown-item" ><i class="fa fa-file-pdf-o"></i>Excel</a></li>
+                      
+                      </ul>
+                    </div>
+                </div>
+                 
+                 </div>
+                    <!-- Dropdown - User Information -->
+                   
+                </li>
+                
+                <li class="nav-item dropdown">
+                                        <div class="filter-content mx-0 px-0" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                    
+                        <div class="filter-li"  >
+                    <span   > <b><i class="fa fa-refresh" aria-hidden="true"></i></b>  &nbsp;Refresh
+                    </span> 
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in m-0 p-0" aria-labelledby="userDropdown">
+                        <ul class="li-profile">
+                          <li style="border-bottom: dotted 1px #c2c2c2; font-size: 12px;"><a class="dropdown-item"> 5 Min </a></li>
+                          <li style="border-bottom: dotted 1px #c2c2c2; font-size: 12px;"><a class="dropdown-item">10 Min</a></li>
+                      
+                      </ul>
+                    </div>
+                    </div>
+                    </div>
+                </li>
+               <li class="nav-item dropdown mx-2">
+                <a class="nav-link admin-name dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span>Dashboard</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in m-0 p-0" aria-labelledby="userDropdown">
+                    <ul class="li-profile">
+                      <li style="border-bottom: dotted 1px #c2c2c2; font-size: 12px;"><a class="dropdown-item" href="dashboard-1.html"><i class="fa fa-dashboard mx-2"></i>Dashboard 1</a></li>
+                  <li style="border-bottom: dotted 1px #c2c2c2; font-size: 12px;"><a class="dropdown-item" href="dashboard-2.html"><i class="fa fa-dashboard mx-2" ></i>Dashboard 2</a></li>
+                  <li style="border-bottom: dotted 1px #c2c2c2; font-size: 12px;"><a class="dropdown-item" href="dashboard-3.html"><i class="fa fa-dashboard mx-2" ></i>Dashboard 3</a></li>
+                  <li style="border-bottom: dotted 1px #c2c2c2; font-size: 12px;"><a class="dropdown-item" href="dashboard-4.html"><i class="fa fa-dashboard mx-2" ></i>Dashboard 4</a></li>
+                  <li style="border-bottom: dotted 1px #c2c2c2; font-size: 12px;"><a class="dropdown-item" href="dashboard-5.html"><i class="fa fa-dashboard mx-2" ></i>Dashboard 5</a></li>
+
+                  </ul>
+                </div>
+            </li> 
+                <li class="nav-item dropdown">
+                    <a class="nav-link admin-name dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span>Admin</span>
+                        <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                    </a>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in m-0 p-0" aria-labelledby="userDropdown">
+                        <ul class="li-profile">
+                         
+                          <li class="dropdown-item">
+                              <a href="#">
+                                  <i class="fa fa-sign-out fa-sm"></i>
+                                  Logout
+                              </a>
+                          </li>  
+                      </ul>
+                    </div>
+                </li>
+
+            </ul>
+
+        </nav>
+    </div>      
+    <div class="dashboard-body">
+        
+        
+        <div class="chard-box">
+      
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="tags collapse" id="tag_demo">
+              <span>Agriculture</span>
+              <span>Customer</span>
+              <span>Registration Medium </span>
+              <span>18 to 29</span>
+              <span>Men </span>
+              <a  class="close"  data-toggle="collapse" data-target="#tag_demo" style="font-size: 18px;">&times;</a>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+      <div>
+       <div class="wrapper">
+      
+              <!-- Sidebar  -->
+              <div id="sidebar">
+                
+                  <div class="filter_row" >
+                      <div class="filter_div">
+                     <div class="filter">
+                     <div class="filter-title">
+                       Filter By  
+                     </div>
+                     <div class="filter-body">
+                       <div id="main">
+                          <div class="filtereaccordion" id="filter">
+                                             <div class="card">
+                                                 <div class="card-header" id="faqhead1">
+                                                     <a href="#" class="filter-link" data-toggle="collapse" data-target="#time-period"
+                                                     aria-expanded="true" aria-controls="time-period">
+                                                     Time Period</a>
+                                                 </div>
+                         
+                                                 <div id="time-period" class="collapse show" aria-labelledby="faqhead1" data-parent="#filter">
+                                                    <div class="card-body">
+                                                     
+                                              
+                                              <script>
+                                              $(document).ready(function() {
+                                              $('#date-range').daterangepicker({
+                                              opens: 'left',
+                                              drops: 'down',
+                                              autoApply: true,
+                                              locale: {
+                                              format: 'YYYY-MM-DD',
+                                              separator: ' - ',
+                                              applyLabel: 'Apply',
+                                              cancelLabel: 'Cancel',
+                                              fromLabel: 'From',
+                                              toLabel: 'To',
+                                              customRangeLabel: 'Custom',
+                                              daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                                              monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                                              firstDay: 0
+                                              }
+                                              });
+                                              });
+                                              </script>
+                                                      <div class="input-group date-range">
+                                                        <!-- <input type="text" class="form-control date-range" id="date-range" placeholder="Select Date Range"> -->
+                                                        <input type="text" class="form-control" name="daterange" value="01/01/2018 - 01/15/2018">
+                                                        <div class="input-group-append">
+                                                          <span class="input-group-text">
+                                                            <i class="fa fa-calendar"></i>
+                                                          </span>
+                                                        </div>
+                                                      </div>
+                                                  
+                    
+                                                      </div>
+                                                     
+                                                  </div>
+                                             </div>
+                                             <script>
+                                                  $(document).ready(function(){
+                                                  $(function() {
+                                                    $('input[name="daterange"]').daterangepicker({
+                                                      "startDate": "18/08/2023",
+                                                      "endDate": "28/08/2023",
+                                                      opens: 'center',
+                                                      locale: {
+                                                        format: 'DD/MM/YYYY'
+                                                      }
+                                                    });
+                                                  });
+                                                });
+                                            </script>
+                                             <div class="card">
+                                                 <div class="card-header" id="filter2">
+                                                     <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#Sector"
+                                                     aria-expanded="true" aria-controls="Sector">Sector</a>
+                                                 </div>
+                         
+                                                 <div id="Sector" class="collapse" aria-labelledby="filter2" data-parent="#filter">
+                                                     <div class="card-body">
+                                                       <ul class="subment-li">
+                                                        <li>
+                                                          <input type="checkbox" name="addcheck">  Select All
+                                                      </li>  
+                                                        <li>
+                                                               <input type="checkbox" name="addcheck">  Agriculture sector
+                                                           </li>
+                                                           <li>
+                                                               <input type="checkbox" name="addcheck">  Services sector
+                                                           </li>
+                                                       </ul>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="card">
+                                                 <div class="card-header" id="filter3">
+                                                     <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#State"
+                                                     aria-expanded="true" aria-controls="State">State</a>
+                                                 </div>
+                         
+                                                 <div id="State" class="collapse" aria-labelledby="filter3" data-parent="#filter">
+                                                     <div class="card-body">
+                                                       <ul class="subment-li">
+                                                        <li>
+                                                          <input type="checkbox" name="addcheck">  Select All
+                                                      </li>  
+                                                           <li>
+                                                               <input type="checkbox" name="addcheck">  1 State
+                                                           </li>
+                                                           <li>
+                                                               <input type="checkbox" name="addcheck">  2 State
+                                                           </li>
+                                                       </ul>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="card">
+                                               <div class="card-header" id="filter4">
+                                                   <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#Country"
+                                                   aria-expanded="true" aria-controls="Country">Country</a>
+                                               </div>
+                       
+                                               <div id="Country" class="collapse" aria-labelledby="filter4" data-parent="#filter">
+                                                   <div class="card-body">
+                                                     <ul class="subment-li">
+                                                      <li>
+                                                        <input type="checkbox" name="addcheck">  Select All
+                                                    </li>  
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck">  India
+                                                         </li>
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck">  Indonesia
+                                                         </li>
+                                                     </ul>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           
+                                           <div class="card">
+                                               <div class="card-header" id="filter5">
+                                                   <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#age"
+                                                   aria-expanded="true" aria-controls="age">Age</a>
+                                               </div>
+                       
+                                               <div id="age" class="collapse" aria-labelledby="filter5" data-parent="#filter">
+                                                   <div class="card-body">
+                                                     <ul class="subment-li">
+                                                      <li>
+                                                        <input type="checkbox" name="addcheck">  Select All
+                                                    </li>  
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck">  18 to 29
+                                                         </li>
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck">  30 to 45
+                                                         </li>
+                                                         <li>
+                                                           <input type="checkbox" name="addcheck">  50 to >
+                                                       </li>
+                                                     </ul>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="card">
+                                               <div class="card-header" id="filter5">
+                                                   <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#Gender"
+                                                   aria-expanded="true" aria-controls="Gender">Gender</a>
+                                               </div>
+                       
+                                               <div id="Gender" class="collapse" aria-labelledby="filter5" data-parent="#filter">
+                                                   <div class="card-body">
+                                                     <ul class="subment-li">
+                                                      <li>
+                                                        <input type="checkbox" name="addcheck">   Select All
+                                                    </li>
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck">   Men
+                                                         </li>
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck">  Female
+                                                         </li>
+                                                     </ul>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="card">
+                                               <div class="card-header" id="filter6">
+                                                   <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#Registration"
+                                                   aria-expanded="true" aria-controls="Registration">Registration at</a>
+                                               </div>
+                       
+                                               <div id="Registration" class="collapse" aria-labelledby="filter6" data-parent="#filter">
+                                                   <div class="card-body">
+                                                     <ul class="subment-li">
+                                                      <li>
+                                                        <input type="checkbox" name="addcheck">  Select All
+                                                    </li>    
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck" value="Web Portal">  Web Portal
+                                                         </li>
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck" value="Agency"> Agency
+                                                         </li>
+                                                         <li>
+                                                          <input type="checkbox" name="addcheck" value="Agency"> East Coast 
+                                                      </li>
+                                                      <li>
+                                                        <input type="checkbox" name="addcheck" value="Agency"> Southern 
+                                                    </li>
+                                                    <li>
+                                                      <input type="checkbox" name="addcheck" value="Agency"> Northern 
+                                                  </li>
+                                                         <li>
+                                                           <input type="checkbox" name="addcheck" value="Regional Office"> Central
+                                                       </li>
+                                                     </ul>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="card">
+                                               <div class="card-header" id="filter7">
+                                                   <a href="#" class="filter-link collapsed" data-toggle="collapse" data-target="#ForeginWorker"
+                                                   aria-expanded="true" aria-controls="ForeginWorker">Foregin Worker Type</a>
+                                               </div>
+                       
+                                               <div id="ForeginWorker" class="collapse" aria-labelledby="filter7" data-parent="#filter">
+                                                   <div class="card-body">
+                                                     <ul class="subment-li">
+                                                      <li>
+                                                        <input type="checkbox" name="addcheck" value="RTK">Select All
+                                                    </li>
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck" value="RTK">New
+                                                         </li>
+                                                         <li>
+                                                             <input type="checkbox" name="addcheck" Value="Normal">Renewal
+                                                         </li>
+                                                     </ul>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                           <div class="filter-btn"> 
+                                             <button class="btn-apply" data-toggle="collapse" data-target="#tag_demo"> Apply</button>  
+                                             <button class="btn-clear" id="sidebarCollapse">Clear</button>
+                                           </div>
+                                         </div>
+                            </div>
+                            <div id="result"></div>
+                             <script>
+                               function getValues() {
+                                var ele=[];
+                                var cb = document.getElementsByName("addcheck");
+                                    var total = 0;
+                                       for (var i = 0; i < cb.length; i++)
+                                        {
+                                          if (cb[i].checked)
+                                          {
+                                             ele.push(cb[i].value);
+                                          }
+                                       } 
+                                 if(ele.length>0){
+                                   document.getElementById("result").innerHTML = "You selected " +ele;
+                                  }
+                                  else{
+                                  document.getElementById("result").innerHTML = "You have not selected anything";
+                                  }
+                                }
+                           </script>
+                       <!-- <ul class="list">
+                         <li>
+                           Time Period</li>
+                   <li>Sector</li>
+                   <li>State</li>
+                   <li>Country</li>
+                   <li>Age</li>
+                   <li>Gender</li>
+                   <li>Registration at</li>
+                   <li>Foregin Worker Type</li>
+                       </ul> -->
+                     </div> 
+                   
+                   </div>
+                    <div class="filter d-none">
+                     <div class="filter-title">
+                      Export<i class="fa fa-exclamation-circle" ></i>
+                   
+                     </div>
+                     <div class="filter-body">
+                       <ul class="subment-li">
+                             <li><i class="fa fa-file-excel-o" ></i>
+                    Excel File</li>
+                    <li><i class="fa fa-file-pdf-o" ></i>
+                   
+                     Pdf File</li>
+                    
+                       </ul>
+                     </div> 
+                   
+                   </div>
+                   <div class="filter d-none">
+                     <div class="filter-title">
+                      Refresh<i class="fa fa-repeat" ></i>
+                   
+                     </div>
+                     <div class="filter-body">
+                       <ul class="subment-li">
+                             <li>
+                               <select class="form-control" aria-label="Filter select">
+                               <option> 5 min </option>
+                                 <option value="January">15 min</option>
+                                 <option value="February">30 min</option>
+                             </select>
+                           </li>
+                            
+                    
+                       </ul>
+                     </div> 
+                   
+                   </div>
+                    
+                     </div> 
+                   
+                   </div>
+      
+                   
+              </div>
+      
+              <!-- Page Content  -->
+              <div id="content">
+               
+                           <div class="dashboard-body my-2">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    
+                                    
+                                     <div class="col-12 col-sm-12 col-md-3 mb-3">
+                                        <div class="chard-card">
+                                        <div class="card">
+                                            <div class="card-header"><br> <i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                                            
+                                                <div class="card-body p-0">
+                                                    <div class="card-scroll">
+                                                    <ul class="list-group list-group-flush">
+                                                      <li class="list-group-item">
+                                                        <div class="list-group-icon circle1"></div>
+                                                        <div class="list-body">
+                                                          <h6>FW Registration 
+
+                                                          </h6>
+                                                         </div>
+                                                        <div class="list-visit"><%= @registration.with_medical_examination%>
+                                                        </div>
+                                                        <div class="list-rate tx-success"> </div>
+                                                      </li>
+                                                      <li class="list-group-item">
+                                                        <div class="list-group-icon circle2"></div>
+                                                        <div class="list-body">
+                                                          <h6>FW Went to Medical Examination</h6>
+                                                         </div>
+                                                        <div class="list-visit"><%= @registration.with_certification%>
+                                                        </div>
+                                                       </li>
+                                                      <li class="list-group-item">
+                                                        <div class="list-group-icon circle3"> </div>
+                                                        <div class="list-body">
+                                                          <h6>Certification</h6>
+                                                         </div>
+                                                        <div class="list-visit"><%= @registration.with_result_released%>
+                                                        </div>
+                                                       </li>
+                                                      <li class="list-group-item">
+                                                        <div class="card-filter ">
+                                                            <div class="dropdown dropleft">
+                                                              <i class="fa fa-refresh" data-toggle="dropdown" ></i>
+                                                               <div class="dropdown-menu sidefilter">
+                                                                <ul> 
+                                                                  <li> <span>X-Ray Review</span>
+                                                                    <div class="card-lifilter"> <span>XQCC Pool </span>
+                                                                      <ul>
+                                                                        <li  data-toggle="collapse" data-target="#Radiographer"><a class="dropdown-item"><input type="checkbox">Received</a></li>
+                                                                        <li data-toggle="collapse" data-target="#Radiographer1"><a class="dropdown-item"><input type="checkbox">Reviewed</a></li>
+                                                                      </ul>
+                                                                    </div>
+                                                                    <div class="card-lifilter"> <span>PCR Pool </span>
+                                                                      <ul>
+                                                                        <li data-toggle="collapse" data-target="#PCR"><a class="dropdown-item"><input type="checkbox">Received</a></li>
+                                                                        <li  data-toggle="collapse" data-target="#PCR1"><a class="dropdown-item"><input type="checkbox">Reviewed</a></li>
+                                                                      </ul>
+                                                                    </div>
+                                                                    <div class="card-lifilter"> <span>X-ray Pending Review </span>
+                                                                      <ul>
+                                                                        <li data-toggle="collapse" data-target="#XQCC"><a class="dropdown-item"><input type="checkbox">Received</a></li>
+                                                                        <li data-toggle="collapse" data-target="#XQCC1"><a class="dropdown-item"><input type="checkbox">Reviewed</a></li>
+                                                                      </ul>
+                                                                    </div>
+                                                                    <div class="card-lifilter"> <span>X-Ray Pending Decision</span>
+                                                                      <ul>
+                                                                        <li data-toggle="collapse" data-target="#X-raypending"><a class="dropdown-item"><input type="checkbox">Received</a></li>
+                                                                        <li data-toggle="collapse" data-target="#X-raypending1"><a class="dropdown-item"><input type="checkbox">Reviewed</a></li>
+                                                                      </ul>
+                                                                    </div>
+                                                                  </li>
+                                                                  <li> <span>Medical Review</span>
+                                                                    <div class="card-lifilter"> 
+                                                                      <ul>
+                                                                        <li data-toggle="collapse" data-target="#Medicalr"> <a class="dropdown-item"><input type="checkbox">Received</a></li>
+                                                                        <li data-toggle="collapse" data-target="#Medicalr1"><a class="dropdown-item"><input type="checkbox">Reviewed</a></li>
+                                                                      </ul>
+                                                                    </div>
+                                                                  </li>
+                                                                </ul>
+                                                               </div> 
+                                                            </div>
+                                                            </div>
+                                                        <div class="list-group-icon circle4"> </div>
+                                                        <div class="list-body" id="pending-view">
+                                                          <h6>FOMEMA Pending to View
+                                                          </h6>
+                                                         </div>
+                                                        <div class="list-visit">805,079
+                                                        </div>
+                                                        <!-- <div class="pending-box">
+                                                            <span>
+                                                            <input type="radio"  name="Pending" value="Received"> Received </span>
+                                                            <span>
+                                                                <input type="radio" name="Pending" value="Reviewed"> Reviewed </span>
+                                                        </div>
+                                                    <div class="Received listcard-box"> -->
+                                                        
+                                                        <div class="Received listcard-box">
+                                                        <ul class="sub-ulcard">
+                                                            <li > <div class="collapse" id="Radiographer" ><div class="sub-licard-header ">X-Ray Review <span> <%= @registration.with_xray_film_pending_review%> </span></div>
+                                                            <div class="sub-licard-body">
+                                                                <span> XQCC Pool Pool </span> 
+                                                                <span> <%= @registration.with_xray_film_recived_by_xqcc%></span>
+                                                            </div></div>
+                                                            <div class="sub-licard-body collapse" id="PCR">
+                                                                <span> PCR Pool </span> 
+                                                                <span><%= @registration.with_xray_film_reviwed%></span>
+                                                            </div>
+                                                            <div class="sub-licard-body collapse" id="XQCC"> 
+                                                                <span> X-ray Pending Review</span> 
+                                                                <span> <%= @registration.with_result_transmitted_to_immigration%></span>
+                                                            </div></li>
+                                                            <li class="collapse" id="Medicalr"> <div class="sub-licard-header">Medical Review  <span><%= @registration.with_block_fw%></span></div>
+                                                               
+                                                                 </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="Reviewed listcard-box">
+                                                        <ul class="sub-ulcard">
+                                                            <li><div class="collapse" id="Radiographer1">  <div class="sub-licard-header">X-Ray Review <span> 700,009</span></div>
+                                                            <div class="sub-licard-body"> 
+                                                                <span> XQCC Pool</span> 
+                                                                <span>805,071</span>
+                                                            </div></div>
+                                                            <div class="sub-licard-body collapse" id="PCR1"> 
+                                                                <span> PCR Pool </span> 
+                                                                <span>805,072</span>
+                                                            </div>
+                                                            <div class="sub-licard-body collapse" id="XQCC1"> 
+                                                                <span> X-ray Pending Review</span> 
+                                                                <span>805,075</span>
+                                                            </div></li>
+                                                            <li class="collapse" id="Medicalr1">  <div class="sub-licard-header">Medical Review  <span>800,079</span></div>
+                                                               
+                                                                 </li>
+                                                        </ul>
+                                                        </div>
+                                                       </li>
+                                                      <li class="list-group-item">
+                                                        <div class="list-group-icon circle5"> </div>
+                                                        <div class="list-body">
+                                                          <h6>Final Result Released
+
+                                                          </h6>
+                                                         </div>
+                                                        <div class="list-visit">806,91
+                                                        </div>
+                                                        <div class="list-rate tx-danger"> </div>
+                                                      </li>
+                                                      <li class="list-group-item">
+                                                        <div class="list-group-icon circle6"> </div>
+                                                        <div class="list-body">
+                                                          <h6>Result Transmitted to Immigration
+
+                                                          </h6>
+                                                         </div>
+                                                        <div class="list-visit">802,35</div>
+                                                        <div class="list-rate tx-success"> </div>
+                                                      </li>
+                                                      <li class="list-group-item">
+                                                        <div class="list-group-icon circle7"> </div>
+                                                        <div class="list-body">
+                                                          <h6>Blocked FW
+                                                          </h6>
+                                                         </div>
+                                                        <div class="list-visit">2,72
+                                                        </div>
+                                                        <div class="list-rate tx-success"> </div>
+                                                      </li>
+                                                      <li class="list-group-item">
+                                                        <div class="list-group-icon circle8"> </div>
+                                                        <div class="list-body">
+                                                          <h6>Appeal
+                                                          </h6>
+                                                         </div>
+                                                        <div class="list-visit"><%= @registration.with_appeal%>
+                                                        </div>
+                                                        <div class="list-rate tx-success"> </div>
+                                                      </li>
+                                                      <li class="list-group-item">
+                                                        <div class="list-group-icon circle9"> </div>
+                                                        <div class="list-body">
+                                                          <h6>FW Insured
+                                                          </h6>
+                                                         </div>
+                                                        <div class="list-visit">2,727
+                                                        </div>
+                                                        <div class="list-rate tx-success"> </div>
+                                                      </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-12 col-md-9">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                                <div class="chard-card">
+                                                  <div class="card">
+                                      <div class="card-header">
+                                       FW Registration by States  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                      </div>
+                                      <div class="card-body p-1">
+                                        <script type="text/javascript">
+                                          google.charts.load('current', {packages: ['corechart', 'bar']});
+                                          google.charts.setOnLoadCallback(drawStacked);
+                                          function drawStacked() {/* w  w w  . j  a  v a  2  s  .  c  om*/
+                                            var data = new google.visualization.DataTable();
+                                            data.addColumn('string', 'Total ');
+                                             data.addColumn('number', 'Total');
+                                            data.addRows(<%=@right_chart_data.to_json.html_safe%>);
+                                            
+                                            var options = {
+                                              hAxis: {
+                                                title: 'States',
+                                                titleTextStyle: {
+                                                  color: '#000000',
+                                                },
+                                                slantedText:true,
+                                                slantedTextAngle:45,
+                                              },
+                                              vAxis: {
+                                                title: 'Kits'
+                                              },
+                                               'chartArea': {'width': '100%'},
+                                               
+                                            };
+                                            var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_values'));
+                                            chart.draw(data, options);
+                                          }
+                                          </script>
+                                          <div id="columnchart_values" style="width: 100%; height:100%;"></div>
+                                        </div>
+                                      
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                                <div class="chard-card">
+                                                  <div class="card">
+                                      <div class="card-header">
+         FW Registration by Sectors <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                      </div>
+                                      <div class="card-body p-1">
+                                      
+                                          <script type="text/javascript">
+                                            google.charts.load('current', {'packages':['corechart']});
+                                            google.charts.setOnLoadCallback(drawChart);
+                                      
+                                            function drawChart() {
+                                      
+                                              var data = google.visualization.arrayToDataTable(<%=@center_pi_chart_data.to_json.html_safe%>);
+                                      
+                                              var options = {
+                                      
+                                                 legend: { position: 'right'},
+                                                               'chartArea':{'width':'100%','height':'80%'},
+                                                  vAxis: {minValue: 0}
+                                              };
+                                      
+                                              var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                                      
+                                              chart.draw(data, options);
+                                            }
+                                          </script>
+                                       
+                                          <div id="piechart" style="width: 100%; height:100%;"></div>
+                                        </div>
+                                      
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-12 col-sm-6 col-md-4 mb-2">
+                                                <div class="chard-card">
+                                                  <div class="card">
+                                      <div class="card-header">
+                                        FW Registration by Countries <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                                      </div>
+                                      <div class="card-body p-1">
+                                        <script type="text/javascript">
+                                          google.charts.load('current', {packages: ['corechart', 'bar']});
+                                          google.charts.setOnLoadCallback(drawStacked);
+                                          function drawStacked() {/* w  w w  . j  a  v a  2  s  .  c  om*/
+                                            var data = new google.visualization.DataTable();
+                                            data.addColumn('string', ' Total');
+                                             data.addColumn('number', 'Total');
+                                            data.addRows([
+                                            ["Selangor", 1800],
+                                            ["Bangladesh", 1700],
+                                              ["Nepal", 1600],
+                                              ["Indonesia",1500],
+                                              ["Myanmar", 1400],
+                                              ["India", 1300],
+                                              ["Pakistan",1200],
+                                              ["Philippins",1100],
+                                              ["Srilanks", 1000],
+                                                  ["Other", 900,]
+                                            ]);
+                                            
+                                            var options = {
+                                              hAxis: {
+                                                title: 'Countries',
+                                                titleTextStyle: {
+                                                  color: '#000000',
+                                                },
+                                                slantedText:true,
+                                                slantedTextAngle:45,
+                                              },
+                                              vAxis: {
+                                                title: 'Kits'
+                                              },
+                                               'chartArea': {'width': '100%'},
+                                               
+                                            };
+                                            var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_values1'));
+                                            chart.draw(data, options);
+                                          }
+                                          </script>
+                                          <div id="columnchart_values1" style="width: 100%; height:100%;"></div>
+                                       
+                                       
+                                        </div>
+                                      
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="col-12">
+                                                <div class="chard-card">
+                                                    <div class="card">
+                                                        <div class="card-header">Trend of Foreign Worker Registration
+                                                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i></div>
+                                                        <div class="card-body p-0">
+                                                            <div class="row">
+                                                                
+<div class="col-12 col-sm-10 pr-0">
+    <div class="chartjs-size-monitor">
+        <div class="chartjs-size-monitor-expand">
+            <div class=""></div>
+        </div>
+        <div class="chartjs-size-monitor-shrink">
+            <div class=""></div>
+        </div>
+    </div>
+    <canvas id="canvas" style="display: block; width: 100%; height: 198px;" class="chartjs-render-monitor"></canvas>
+</div>
+<div class="col-12 col-sm-2">
+    <div class="row no-gutters bg-gray">
+        <div class="col-12 col-sm-12">
+          <div class="d-flex align-items-baseline">
+            <h4 class="tx-numeric">
+              <b>1,361,191</b><span>Year 2019
+             </span></h4>
+             
+          </div>
+           
+        </div><!-- col -->
+        <div class="col-12 col-sm-12">
+          <div class="d-flex align-items-baseline">
+            <h4 class="tx-numeric">
+              <b>1,261,191</b>
+              <span>Year 2020
+              </span></h4>
+            
+          </div>
+         </div><!-- col -->
+        <div class="col-12 col-sm-12 mg-t-15 mg-sm-t-0">
+          <div class="d-flex align-items-baseline">
+            <h4 class="tx-numeric">
+              <b>1,661,191</b><span>Year 2021
+              </span></h4>
+           </div>
+         </div><!-- col -->
+        <div class="col-12 col-sm-12 mg-t-15 mg-sm-t-0">
+          <div class="d-flex align-items-baseline">
+            <h4 class="tx-numeric">
+              <b>1,861,191</b> <span>Year 2022
+             
+            </span></h4>
+
+          </div>
+         </div><!-- col -->
+         <div class="col-12 col-sm-12 mg-t-15 mg-sm-t-0">
+          <div class="d-flex align-items-baseline">
+            <h4 class="tx-numeric border-0"> 
+              <b>2,361,191</b><span>Year 2023
+             
+            </span></h4>
+
+          </div>
+         </div><!-- col -->
+      </div><!-- row -->
+</div>
+                                                                
+                                                            </div>
+                                                          
+                                                            <script src="https://cdn2.hubspot.net/hubfs/476360/Chart.js"></script>
+                                                            <script src="https://cdn2.hubspot.net/hubfs/476360/utils.js"></script>
+                                                            
+                                                            <script>
+                                                                var config = {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug','Sep','Oct','Nov','Dec'],
+                    datasets: [{
+                        label: 'Year 2019',
+                        backgroundColor: window.chartColors.red,
+                        borderColor: window.chartColors.red,
+                        fill: false,
+                        data: [
+                            10,
+                            20,
+                            30,
+                            40,
+                            100,
+                            50,
+                            150,
+                            30,
+                            40,
+                            100,
+                            100,
+                            50
+                         
+                        ],
+                    }, {
+                        label: 'Year 2020',
+                        backgroundColor: window.chartColors.blue,
+                        borderColor: window.chartColors.blue,
+                        fill: false,
+                        data: [
+                            50,
+                            300,
+                            100,
+                            450,
+                            150,
+                            200,
+                            300,					100,
+                            450,
+                            150,
+                            150,
+        
+                            200
+                        ],
+                
+                    },
+                    {
+                        label: 'Year 2021',
+                        backgroundColor: window.chartColors.green,
+                        borderColor: window.chartColors.green,
+                        fill: false,
+                        data: [
+                            150,
+                            300,
+                            150,
+                            400,
+                            110,
+                            210,
+                            100,					
+                            130,
+                            350,
+                            140,
+                            150,
+                            200
+                        ],
+                
+                    },
+                    {
+                        label: 'Year 2022',
+                        backgroundColor: window.chartColors.orange,
+                        borderColor: window.chartColors.orange,
+                        fill: false,
+                        data: [
+                            250,
+                            400,
+                            250,
+                            450,
+                            160,
+                            290,
+                            150,					
+                            190,
+                            400,
+                            240,
+                            250,
+                            250
+                        ],
+                
+                    },
+                    {
+                        label: 'Year 2023',
+                        backgroundColor: window.chartColors.black,
+                        borderColor: window.chartColors.black,
+                        fill: false,
+                        data: [
+                            350,
+                            450,
+                            350,
+                            550,
+                            460,
+                            390,
+                            350,					
+                            390,
+                            500,
+                            340,
+                            350,
+                            350
+                        ],
+                
+                    }
+                ]
+                },
+                options: {
+                    responsive: true,
+                    title: {
+                        display: false,
+                        text: 'Chart.js Line Chart - Logarithmic'
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: true,
+                  scaleLabel: {
+                    display: false,
+                    labelString: 'Date'
+                  },
+                    
+                        }],
+                        yAxes: [{
+                            display: true,
+                            //type: 'logarithmic',
+                  scaleLabel: {
+                                    display: false,
+                                    labelString: 'Index Returns'
+                                },
+                                ticks: {
+                                    min: 0,
+                                    max: 1000,
+        
+                                    // forces step size to be 5 units
+                                    stepSize: 100
+                                }
+                        }]
+                    }
+                }
+            };
+        
+            window.onload = function() {
+                var ctx = document.getElementById('canvas').getContext('2d');
+                window.myLine = new Chart(ctx, config);
+            };
+        
+            document.getElementById('randomizeData').addEventListener('click', function() {
+                config.data.datasets.forEach(function(dataset) {
+                    dataset.data = dataset.data.map(function() {
+                        return randomScalingFactor();
+                    });
+        
+                });
+        
+                window.myLine.update();
+            });
+                                                            </script>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        </div>
+                                                       
+        
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                      </div>
+              </div>
+      </div>
+      </div>
+      </div>
+            </div>
+           
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+    
+    //     $('input[type="radio"]').click(function(){
+    //     var inputValue = $(this).attr("value");
+    //     var targetBox = $("." + inputValue);
+    //     $("listcard-box").not(targetBox).hide();
+    //     $(targetBox).show();
+    // });
+});
+</script>
+ 
+ 
+<style>
+    .filter {
+    margin-bottom: 14px;
+    width: 100%;
+    float: right;}
+</style>
